@@ -265,3 +265,8 @@ dialog.lightbox[open]{display:flex;flex-direction:column;animation:fade .25s eas
 /* The dock is narrow on a 360px phone: keep its labels on one line (board: 18px bold) */
 .dock .btn{white-space:nowrap;padding:0 10px}
 .dock .btn-wa{font-size:1.125rem}
+
+/* Light/dark switch in the header (round, 40px like the other header controls) */
+.themebtn{flex:none;width:40px;height:40px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink);display:grid;place-items:center;cursor:pointer;padding:0}
+.themebtn svg{width:19px;height:19px}
+@media (max-width:480px){.themebtn{width:36px;height:36px}}

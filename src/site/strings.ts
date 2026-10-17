@@ -109,7 +109,7 @@ en:{
 }};
 
 /**
- * New strings for the gallery (not in the prototype). DRAFTS for Pratik Davda to review;
+ * New strings for the gallery and the light/dark switch (not in the prototype). DRAFTS for Pratik Davda to review;
  * the Hindi and English were written, not machine-translated, and still need his approval.
  */
 const GALLERY = {
@@ -120,6 +120,7 @@ const GALLERY = {
     galEmpty: 'આ વિભાગમાં હજી ફોટા ઉમેરાયા નથી.', galAll: 'બધા ફોટા જુઓ', galNone: 'ફોટા જલદી આવશે.',
     askModel: 'આ મોડેલ વિશે પૂછો', share: 'લિંક શેર કરો', prev: 'પાછલો ફોટો', next: 'આગળનો ફોટો', video: 'વિડિયો',
     linkCopied: 'લિંક કૉપી થઈ',
+    toLight: 'લાઇટ મોડ', toDark: 'ડાર્ક મોડ',
   },
   hi: {
     navGallery: 'गैलरी', morePhotos: 'और फ़ोटो देखें', galTitle: 'फ़ोटो गैलरी',
@@ -128,6 +129,7 @@ const GALLERY = {
     galEmpty: 'इस श्रेणी में अभी फ़ोटो नहीं जोड़े गए हैं।', galAll: 'सभी फ़ोटो देखें', galNone: 'फ़ोटो जल्द आएँगे।',
     askModel: 'इस मॉडल के बारे में पूछें', share: 'लिंक शेयर करें', prev: 'पिछला फ़ोटो', next: 'अगला फ़ोटो', video: 'वीडियो',
     linkCopied: 'लिंक कॉपी हो गया',
+    toLight: 'लाइट मोड', toDark: 'डार्क मोड',
   },
   en: {
     navGallery: 'Gallery', morePhotos: 'See more photos', galTitle: 'Photo gallery',
@@ -136,6 +138,7 @@ const GALLERY = {
     galEmpty: 'No photos in this category yet.', galAll: 'See all photos', galNone: 'Photos coming soon.',
     askModel: 'Ask about this model', share: 'Share link', prev: 'Previous photo', next: 'Next photo', video: 'Video',
     linkCopied: 'Link copied',
+    toLight: 'Light mode', toDark: 'Dark mode',
   },
 }
 

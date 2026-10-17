@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import type { ReactNode } from 'react'
 
 import '@/site/site.css'
+import { THEME_SCRIPT } from '@/site/theme'
 
 export const metadata: Metadata = {
   title: 'દવડા ઍગ્રો ઇન્ડસ્ટ્રીઝ – ચિતલ, અમરેલી',
@@ -19,8 +20,9 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="gu">
+    <html lang="gu" suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         {/* eslint-disable-next-line @next/next/no-page-custom-font */}
