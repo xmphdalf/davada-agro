@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<title>ઍડમિન — ગેલેરી (ડેસ્કટૉપ)</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Gujarati:wdth,wght@75..125,500..800&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;family=Hind:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0;background:#F4F4F8;color:#1C1F26;font-family:"Hind Vadodara","Noto Sans Gujarati",system-ui,sans-serif;font-size:16px;line-height:1.6}
+*{box-sizing:border-box}
+h1,h2,h3{margin:0;font-family:"Anek Gujarati","Hind Vadodara",sans-serif;font-stretch:92%;font-weight:700;line-height:1.25}
+p{margin:0}
+a{color:inherit}
+button{font:inherit;color:inherit}
+.d{font-family:"Anek Gujarati","Hind Vadodara",sans-serif;font-stretch:92%}
+.hint{font-size:14px;color:#5B6070;line-height:1.5}
+.f{display:flex;flex-direction:column;gap:6px}
+.fl{font-size:15px;font-weight:600}
+.inp{min-height:48px;border:1.5px solid #8E92A3;border-radius:10px;padding:10px 14px;background:#FFFFFF;width:100%;display:flex;align-items:center;gap:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 16px;border-radius:12px;font-weight:600;font-size:16px;text-decoration:none;border:0;cursor:pointer;white-space:nowrap}
+.btn svg{width:18px;height:18px;flex:none}
+.bk{background:#E07B16;color:#1B1206}
+.bg{background:#FFFFFF;border:1.5px solid #E3E3EA;color:#1C1F26}
+.chip{flex:none;height:44px;padding:0 14px;border-radius:999px;border:1.5px solid #E3E3EA;background:#FFFFFF;font-weight:500;white-space:nowrap;cursor:pointer}
+.chip.on{background:#19203F;border-color:#19203F;color:#FFFFFF}
+.seg{display:flex;background:#F4F4F8;border-radius:10px;padding:4px;gap:4px}
+.seg button{flex:1;height:36px;border:0;border-radius:8px;background:transparent;font-weight:500;display:flex;align-items:center;justify-content:center;gap:6px;cursor:pointer;font-size:14.5px}
+.seg button.on{background:#FFFFFF;box-shadow:0 0 0 1px #E3E3EA;font-weight:600}
+.ok{width:7px;height:7px;border-radius:50%;background:#19203F}
+.miss{width:7px;height:7px;border-radius:50%;border:1.5px solid #B85E08}
+.tile{position:relative;display:grid;place-items:center;aspect-ratio:1;border-radius:10px;overflow:hidden;text-decoration:none}
+.side a{height:44px;border-radius:10px;padding:0 12px;display:flex;align-items:center;gap:12px;text-decoration:none;color:#C9CBDD}
+.side a.on{background:rgba(255,255,255,.1);color:#FFFFFF;font-weight:600}
+.side svg{width:20px;height:20px;flex:none}
+.grp{font-size:12.5px;color:#8E92A3;padding:14px 12px 4px}
+</style>
+</helmet>
+<div style="width:1440px;height:960px;background:#F4F4F8;display:flex">
+
+<aside class="side" style="width:248px;flex:none;background:#10142C;color:#FFFFFF;padding:18px 12px;display:flex;flex-direction:column;gap:2px">
+<div style="display:flex;align-items:center;gap:10px;padding:4px 8px 18px">
+<svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true" style="width:34px;height:34px"><rect width="40" height="40" rx="10" fill="#19203F"/><path d="M13 32c0-7 3-13 6-17h2c3 4 6 10 6 17z" fill="#E07B16"/><ellipse cx="20" cy="14.5" rx="3" ry="1.2" fill="#E07B16"/><path d="M20 13V6l6 1.6L20 9" fill="#F4A94E" stroke="#F4A94E" stroke-width=".6"/></svg>
+<div style="display:flex;flex-direction:column"><b class="d" style="font-size:17px;line-height:1.2">દવડા ઍગ્રો</b><span style="font-size:13px;color:#A6AABA">વેબસાઇટ ઍડમિન</span></div>
+</div>
+<nav aria-label="ઍડમિન" style="display:flex;flex-direction:column;gap:2px">
+<a href="AdminHomeDesktop.dc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>મુખ્ય</a>
+<a href="AdminProductsDesktop.dc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="16.5" r="3"/><circle cx="17.5" cy="17.5" r="2"/><path d="M7 13.5V8h5l2.5 6H20v3.5M10 8V5"/></svg>સનેડા</a>
+<a href="#" class="on" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M4 17l5-4.5 3.5 3 3-2.5L20 17"/></svg>ગેલેરી</a>
+<span class="grp">વેબસાઇટ લખાણ</span>
+<a href="#">હોમ પેજ લખાણ</a><a href="#">સરકારી સહાય</a><a href="#">આંકડા</a><a href="#">સિદ્ધિઓ</a><a href="#">ખેડૂતોના અભિપ્રાય</a><a href="#">સંપર્ક અને સમય</a>
+<span class="grp"></span>
+<a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>ફેરફારનો ઇતિહાસ</a>
+</nav>
+</aside>
+
+<div style="flex-grow:1;display:flex;flex-direction:column;min-width:0">
+<header style="height:68px;background:#FFFFFF;border-bottom:1px solid #E3E3EA;display:flex;align-items:center;gap:12px;padding:0 40px;flex:none">
+<h1 style="font-size:22px;margin-right:auto">ગેલેરી <span class="hint" style="font-weight:400">· ૨૪</span></h1>
+<button class="btn bg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>YouTube વિડિયો ઉમેરો</button>
+<button class="btn bk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>ફોટા ઉમેરો</button>
+</header>
+
+<div style="flex-grow:1;display:grid;grid-template-columns:minmax(0,1fr) 400px;min-height:0">
+<main style="padding:24px 32px;display:flex;flex-direction:column;gap:16px;overflow:hidden">
+<div style="height:84px;border-radius:12px;border:1.5px dashed #8E92A3;display:flex;align-items:center;justify-content:center;gap:10px;background:#FFFFFF;flex:none"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#19203F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg><span>ફોટા અહીં ખેંચીને મૂકો, અથવા <a href="#" style="font-weight:600;text-underline-offset:4px">પસંદ કરો</a></span></div>
+<div role="group" aria-label="વિભાગ" style="display:flex;gap:8px;flex:none">
+<button class="chip on" aria-pressed="true">બધા</button><button class="chip" aria-pressed="false">સનેડા</button><button class="chip" aria-pressed="false">ટ્રોલી અને ઓજારો</button><button class="chip" aria-pressed="false">ડિલિવરી</button><button class="chip" aria-pressed="false">વર્કશૉપ</button><button class="chip" aria-pressed="false">સન્માન</button>
+<span class="hint" style="margin-left:auto;display:flex;gap:8px;align-items:center"><span style="width:10px;height:10px;border-radius:50%;border:2px solid #B85E08"></span>કૅપ્શન બાકી</span>
+</div>
+<div style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px">
+<sc-for list="{{items}}" as="g" hint-placeholder-count="24">
+<a class="tile" href="#" aria-label="{{g.cap}}" style="background:{{g.bg}};{{g.sel}}">
+<sc-if value="{{g.model}}" hint-placeholder-val="{{false}}"><img src="{{g.img}}" alt="" style="width:86%"></sc-if>
+<sc-if value="{{g.photo}}" hint-placeholder-val="{{false}}"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8E92A3" stroke-width="1.4" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M4 17l5-4.5 3.5 3 3-2.5L20 17"/></svg></sc-if>
+<sc-if value="{{g.video}}" hint-placeholder-val="{{false}}"><span style="width:38px;height:38px;border-radius:50%;background:#FFFFFF;display:grid;place-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="#19203F" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></span></sc-if>
+<sc-if value="{{g.miss}}" hint-placeholder-val="{{false}}"><span style="position:absolute;right:6px;top:6px;width:10px;height:10px;border-radius:50%;background:#FFFFFF;border:2px solid #B85E08"></span></sc-if>
+</a>
+</sc-for>
+</div>
+</main>
+
+<aside aria-label="ફોટાની વિગત" style="background:#FFFFFF;border-left:1px solid #E3E3EA;display:flex;flex-direction:column">
+<div style="height:220px;background:#F4F4F8;display:grid;place-items:center;flex:none;position:relative"><img src="../assets/KS-10.svg" alt="દવડા શક્તિ ૧૦" style="width:260px"><span style="position:absolute;left:12px;top:10px;font-size:11px;color:#5B6070;font-family:Hind,sans-serif;letter-spacing:.04em">PHOTO PLACEHOLDER</span></div>
+<div style="padding:20px 22px;display:flex;flex-direction:column;gap:18px;flex-grow:1">
+<div class="f"><span class="fl">વિભાગ</span><div style="display:flex;gap:6px;flex-wrap:wrap"><button class="chip on" aria-pressed="true">સનેડા</button><button class="chip" aria-pressed="false">ડિલિવરી</button><button class="chip" aria-pressed="false">વર્કશૉપ</button><button class="chip" aria-pressed="false">સન્માન</button></div></div>
+<div class="f"><span class="fl">કૅપ્શન</span>
+<div class="seg" role="tablist" aria-label="ભાષા"><button class="on" role="tab" aria-selected="true"><span class="ok"></span>ગુજરાતી</button><button role="tab" aria-selected="false" style="font-family:Hind,sans-serif"><span class="ok"></span>हिंदी</button><button role="tab" aria-selected="false" style="font-family:Hind,sans-serif"><span class="miss"></span>English</button></div>
+<div class="inp">દવડા શક્તિ ૧૦</div></div>
+<div class="f"><label class="fl">ફોટામાં કયું મોડેલ છે?</label><div class="inp" style="justify-content:space-between"><span>દવડા શક્તિ ૧૦ <span style="color:#5B6070;font-family:Hind,sans-serif">· KS-10</span></span><svg width="14" height="14" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5l3 3 3-3" stroke="#1C1F26" stroke-width="1.5" fill="none"/></svg></div><span class="hint">ગેલેરીમાં “આ મોડેલ વિશે પૂછો” બટન દેખાશે.</span></div>
+<button class="btn" style="background:transparent;justify-content:flex-start;padding:0;color:#B3261E;align-self:flex-start;text-decoration:underline;text-underline-offset:4px">આ ફોટો કાઢી નાખો</button>
+</div>
+<div style="border-top:1px solid #E3E3EA;padding:12px 22px;display:flex;justify-content:flex-end;gap:10px"><button class="btn bg">રદ કરો</button><button class="btn bk">સાચવો</button></div>
+</aside>
+</div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":960}}'>
+class Component extends DCLogic {
+renderVals() {
+const IMG = { 'KS-07':'../assets/KS-07.svg', 'KS-10':'../assets/KS-10.svg', 'KS-12':'../assets/KS-12.svg', 'KB-10':'../assets/KB-10.svg', 'KT-15':'../assets/KT-15.svg', 'KC-05':'../assets/KC-05.svg' };
+const G = [
+['model','KS-12','દવડા બુલેટ ૧૨'],['photo',null,'લાઠીમાં ડિલિવરી',1],['model','KS-10','દવડા શક્તિ ૧૦',1,1],['photo',null,'અમારો વર્કશૉપ, ચિતલ'],['video',null,'દવડા બુલેટ ૧૨ ખેતરમાં'],['model','KT-15','હાઇડ્રોલિક ટ્રોલી',1],
+['photo',null,'બાબરામાં ડિલિવરી',1],['photo',null,'શ્રેષ્ઠ કૃષિ સાધન ઉત્પાદક, ૨૦૨૪'],['model','KB-10','મિની બુલેટ ટ્રેક્ટર ૧૦'],['video',null,'ડિલિવરીનો દિવસ, અમરેલી'],['model','KS-07','દવડા સાથી ૭'],['photo',null,'સનેડાની ચકાસણી',1],
+['model','KC-05','કલ્ટિવેટર'],['photo',null,'ચિતલમાં ડિલિવરી',1],['photo',null,'ખેતરમાં સનેડો'],['photo',null,'ISO 9001:2015 પ્રમાણપત્ર'],['video',null,'વર્કશૉપની ઝલક'],['photo',null,'અમરેલીમાં ડિલિવરી'],
+['model','KS-10','દવડા શક્તિ ૧૦, ટ્રોલી સાથે'],['photo',null,'ટ્રોલીનું હાઇડ્રોલિક ટિપિંગ'],['photo',null,'કૃષિ મેળામાં શ્રેષ્ઠ સ્ટૉલ, ૨૦૨૨'],['photo',null,'લાઠીમાં ડિલિવરી'],['model','KS-12','દવડા બુલેટ ૧૨'],['photo',null,'વર્કશૉપ']
+];
+const BG = { model:'#FFFFFF', photo:'#ECEDF3', video:'#19203F' };
+return { items: G.map(([k,id,cap,miss,sel]) => ({ model:k==='model', photo:k==='photo', video:k==='video', img:id?IMG[id]:'', cap, miss:!!miss, bg:BG[k], sel: sel ? 'outline:3px solid #19203F;outline-offset:2px' : '' })) };
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<title>ઍડમિન લૉગિન</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Gujarati:wdth,wght@75..125,500..800&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#FFFFFF;color:#1C1F26;font-family:"Hind Vadodara","Noto Sans Gujarati",system-ui,sans-serif;font-size:16px;line-height:1.6}
+*{box-sizing:border-box}
+h1,h2,h3{margin:0;font-family:"Anek Gujarati","Hind Vadodara",sans-serif;font-stretch:92%;font-weight:700;line-height:1.25}
+p{margin:0}
+a{color:inherit}
+button{font:inherit;color:inherit}
+.d{font-family:"Anek Gujarati","Hind Vadodara",sans-serif;font-stretch:92%}
+.hint{font-size:14px;color:#5B6070;line-height:1.5}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 20px;border-radius:12px;font-weight:600;font-size:17px;text-decoration:none;border:0;cursor:pointer;white-space:nowrap}
+.bk{background:#E07B16;color:#1B1206}
+.otp{width:44px;height:56px;border:1.5px solid #8E92A3;border-radius:10px;display:grid;place-items:center;font-size:24px;font-weight:600;font-family:"Hind",sans-serif}
+</style>
+</helmet>
+<div style="width:360px;height:780px;background:#FFFFFF;display:flex;flex-direction:column">
+
+<div style="background:#19203F;color:#FFFFFF;padding:44px 24px 36px;display:flex;flex-direction:column;gap:18px">
+<svg width="44" height="44" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#10142C"/><path d="M13 32c0-7 3-13 6-17h2c3 4 6 10 6 17z" fill="#E07B16"/><ellipse cx="20" cy="14.5" rx="3" ry="1.2" fill="#E07B16"/><path d="M20 13V6l6 1.6L20 9" fill="#F4A94E" stroke="#F4A94E" stroke-width=".6"/></svg>
+<div>
+<h1 class="d" style="font-size:26px;font-weight:800">દવડા ઍગ્રો ઇન્ડસ્ટ્રીઝ</h1>
+<p style="color:#C9CBDD">વેબસાઇટ ઍડમિન</p>
+</div>
+</div>
+
+<main style="padding:28px 24px;display:flex;flex-direction:column;gap:20px;flex-grow:1">
+<div>
+<h2 style="font-size:22px">OTP લખો</h2>
+<p class="hint" style="margin-top:6px">+91 98765 43210 પર મોકલેલો ૬ આંકડાનો કોડ લખો.</p>
+</div>
+<div role="group" aria-label="OTP" style="display:flex;gap:8px;justify-content:space-between">
+<div class="otp">4</div><div class="otp">8</div><div class="otp">2</div><div class="otp" style="border-color:#19203F;box-shadow:0 0 0 3px rgba(224,123,22,.45)"></div><div class="otp"></div><div class="otp"></div>
+</div>
+<div style="display:flex;justify-content:space-between;align-items:center">
+<a href="#" style="min-height:44px;display:inline-flex;align-items:center;font-weight:600;text-underline-offset:4px">નંબર બદલો</a>
+<span class="hint">ફરી મોકલો · ૦:૨૪</span>
+</div>
+<a class="btn bk" href="AdminHomeMobile.dc.html" style="margin-top:4px">લૉગિન કરો</a>
+<p class="hint" style="margin-top:auto">ફક્ત માન્ય મોબાઇલ નંબર પરથી જ લૉગિન થઈ શકે છે. આ ફોન પર ૩૦ દિવસ સુધી લૉગિન રહેશે.</p>
+</main>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":360,"height":780}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

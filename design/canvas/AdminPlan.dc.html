@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Admin plan — template structure</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Gujarati:wdth,wght@75..125,500..800&amp;family=Anek+Latin:wdth,wght@75..125,500..800&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;family=Hind:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#FFFFFF;color:#1C1F26;font-family:"Hind","Hind Vadodara",system-ui,sans-serif;font-size:16px;line-height:1.6}
+*{box-sizing:border-box}
+h1,h2,h3{margin:0;font-family:"Anek Latin","Anek Gujarati",sans-serif;font-stretch:92%;font-weight:700;line-height:1.2}
+p{margin:0}
+.gu{font-family:"Hind Vadodara","Noto Sans Gujarati",sans-serif;line-height:1.7}
+.lbl{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#5B6070;font-weight:600}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px}
+.mut{color:#5B6070}
+.sec{display:grid;grid-template-columns:260px minmax(0,1fr);gap:48px;padding:64px 96px;border-top:1px solid #E3E3EA}
+.box{border:1px solid #E3E3EA;border-radius:14px;padding:16px 18px;background:#FFFFFF}
+.node{border:1.5px solid #19203F;border-radius:12px;padding:10px 14px;background:#FFFFFF;font-weight:600}
+.leaf{border:1px solid #E3E3EA;border-radius:10px;padding:8px 12px;background:#F4F4F8;font-size:15px}
+td,th{text-align:left;padding:12px 14px;border-bottom:1px solid #E3E3EA;vertical-align:top;font-size:14.5px}
+th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#5B6070;font-weight:600}
+</style>
+</helmet>
+<div style="width:1440px;height:3040px;background:#FFFFFF;display:flex;flex-direction:column">
+
+<div style="background:#19203F;color:#FFFFFF;padding:80px 96px 72px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:64px;align-items:end">
+<div style="display:flex;flex-direction:column;gap:18px">
+<span class="lbl" style="color:#F4A94E">03 · Admin panel · plan</span>
+<h1 style="font-size:76px;font-weight:800;line-height:1.02">Change the site from the workshop floor.</h1>
+</div>
+<p style="color:#C9CBDD;font-size:18px">A small, phone-first admin for Pratik Davda: update a price, mark a model out of stock, add delivery photos. It's also built as a reusable template, so every Davada-specific part sits in one config file.</p>
+</div>
+
+<div style="padding:64px 96px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:40px">
+<div style="display:flex;flex-direction:column;gap:10px"><span style="font-weight:700;color:#B85E08">01</span><h3 style="font-size:21px">Same words as the site</h3><p class="mut" style="font-size:15px">Gujarati first, with an English switch. Section names in the admin match the headings on the website, so “સનેડા” here is “સનેડા” there.</p></div>
+<div style="display:flex;flex-direction:column;gap:10px"><span style="font-weight:700;color:#B85E08">02</span><h3 style="font-size:21px">Save is live, and undoable</h3><p class="mut" style="font-size:15px">No drafts or publish step. Saving updates the site at once, with a 10-second undo, and every change is kept in a history list he can roll back from.</p></div>
+<div style="display:flex;flex-direction:column;gap:10px"><span style="font-weight:700;color:#B85E08">03</span><h3 style="font-size:21px">Forms, never code</h3><p class="mut" style="font-size:15px">Every field is a plain input, switch, chip or photo picker. No HTML, no markdown, no image sizes to think about: photos are compressed on upload.</p></div>
+<div style="display:flex;flex-direction:column;gap:10px"><span style="font-weight:700;color:#B85E08">04</span><h3 style="font-size:21px">Built once, reused</h3><p class="mut" style="font-size:15px">Screens are generated from a schema of collections and fields. A new client is a new config file, colours and fonts, not a new admin.</p></div>
+</div>
+
+<!-- IA -->
+<div class="sec">
+<div><span class="lbl">Structure</span><h2 style="font-size:30px;margin-top:8px">What he can edit</h2><p class="mut" style="font-size:15px;margin-top:10px">Two kinds of content. Collections are lists he adds to. Pages are fixed sections with editable text. The bottom tabs on a phone carry the three things he touches most.</p></div>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;align-items:start">
+<div style="display:flex;flex-direction:column;gap:10px">
+<span class="lbl">Tab · મુખ્ય</span>
+<div class="node gu">મુખ્ય (Home)</div>
+<div class="leaf gu">સાઇટની સ્થિતિ</div>
+<div class="leaf gu">ઝડપી કામ: ફોટો ઉમેરો, કિંમત / સ્ટૉક</div>
+<div class="leaf gu">બાકી કામ (missing translations)</div>
+<div class="leaf gu">તાજેતરના ફેરફાર</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px">
+<span class="lbl">Tab · collection</span>
+<div class="node gu">સનેડા (Products)</div>
+<div class="leaf gu">યાદી: ક્રમ, સ્ટૉક સ્વિચ</div>
+<div class="leaf gu">નવો / ફેરફાર: ફોટા, નામ, વિભાગ, કિંમત, વિગતો</div>
+<div class="leaf gu">કાઢી નાખો (with history)</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px">
+<span class="lbl">Tab · collection</span>
+<div class="node gu">ગેલેરી (Gallery)</div>
+<div class="leaf gu">ફોટા ઉમેરો (camera / files)</div>
+<div class="leaf gu">YouTube લિંક ઉમેરો</div>
+<div class="leaf gu">ફોટાની વિગત: વિભાગ, કૅપ્શન, મોડેલ</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px">
+<span class="lbl">Tab · વધુ</span>
+<div class="node gu">વધુ (More)</div>
+<div class="leaf gu">હોમ પેજ લખાણ <span class="mut mono">page</span></div>
+<div class="leaf gu">સરકારી સહાય <span class="mut mono">page</span></div>
+<div class="leaf gu">આંકડા <span class="mut mono">page</span></div>
+<div class="leaf gu">સિદ્ધિઓ <span class="mut mono">list</span></div>
+<div class="leaf gu">ખેડૂતોના અભિપ્રાય <span class="mut mono">list</span></div>
+<div class="leaf gu">સંપર્ક અને સમય <span class="mut mono">page</span></div>
+<div class="leaf gu">ફેરફારનો ઇતિહાસ</div>
+</div>
+</div>
+</div>
+
+<!-- Field types -->
+<div class="sec">
+<div><span class="lbl">Template · field kit</span><h2 style="font-size:30px;margin-top:8px">Ten field types cover everything</h2><p class="mut" style="font-size:15px;margin-top:10px">Each field type renders one component from the admin kit. Adding a new kind of content means listing its fields, not designing screens.</p></div>
+<table style="border-collapse:collapse;width:100%">
+<thead><tr><th style="width:170px">Type</th><th>Renders as</th><th style="width:330px">Used here for</th></tr></thead>
+<tbody>
+<tr><td class="mono">text.i18n</td><td>Input with ગુ / हि / En tabs and a status dot per language. An empty language falls back to Gujarati on the site.</td><td class="gu">નામ, હેડિંગ, કૅપ્શન</td></tr>
+<tr><td class="mono">longtext.i18n</td><td>Same, multi-line, with a soft character guide.</td><td class="gu">વર્ણન, સહાયનું લખાણ, અભિપ્રાય</td></tr>
+<tr><td class="mono">money</td><td>₹ prefix, Latin digits while typing, live “site will show ₹૧,૬૫,૦૦૦” preview. Optional “hide price” switch.</td><td class="gu">એક્સ-શોરૂમ કિંમત</td></tr>
+<tr><td class="mono">number.unit</td><td>Number input with a fixed unit label after it.</td><td class="gu">HP, ટન, લિટર, ફૂટ, વર્ષ</td></tr>
+<tr><td class="mono">toggle</td><td>Full-row switch, 44 px, label on the left. On = indigo.</td><td class="gu">સ્ટૉકમાં છે, સૌથી વધુ વેચાતો</td></tr>
+<tr><td class="mono">choice</td><td>Chips, single select. Same chip as the site filters.</td><td class="gu">વિભાગ, સ્ટાર્ટ</td></tr>
+<tr><td class="mono">ref</td><td>Picker that lists items from another collection.</td><td class="gu">ફોટામાં કયું મોડેલ છે</td></tr>
+<tr><td class="mono">images</td><td>Camera / gallery picker, drag to reorder, first is the main photo. Resized to WebP 1200 / 600 / 300 on upload.</td><td class="gu">સનેડાના ફોટા, ગેલેરી</td></tr>
+<tr><td class="mono">youtube</td><td>Paste a link; shows the thumbnail once it's valid.</td><td class="gu">ગેલેરી વિડિયો</td></tr>
+<tr><td class="mono">list</td><td>Rows with drag handle, open-to-edit, add at the bottom.</td><td class="gu">સિદ્ધિઓ, અભિપ્રાય, સહાયનાં પગલાં</td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- Config -->
+<div class="sec">
+<div><span class="lbl">Template · reuse</span><h2 style="font-size:30px;margin-top:8px">One file per client</h2><p class="mut" style="font-size:15px;margin-top:10px">To reuse for another business: copy the template, edit this config, swap the brand tokens and logo, deploy. The website reads the same content, so the two never drift apart.</p></div>
+<div style="display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:28px;align-items:start">
+<pre class="mono" style="margin:0;background:#10142C;color:#E4E4F2;border-radius:18px;padding:28px;font-size:13.5px;line-height:1.75;white-space:pre-wrap">site: {
+  name:     { gu: "દવડા ઍગ્રો ઇન્ડસ્ટ્રીઝ", en: "Davada Agro Industries" },
+  locales:  ["gu", "hi", "en"],   default: "gu",
+  numerals: { gu: "gujr" },        // display only; inputs stay 0–9
+  brand:    { primary: "#19203F", accent: "#E07B16", logo: "mark.svg" },
+  contact:  { phone, whatsapp }
+}
+
+collections: {
+  products: {
+    label: { gu: "સનેડા" },  sortable: true,  idPattern: "K?-##",
+    fields: {
+      photos: images(max 6),   name: text.i18n,   desc: longtext.i18n,
+      cat:    choice("3", "4", "impl"),
+      price:  money(hideable),  stock: toggle,    best: toggle,
+      specs:  group(hp, gears, load, tank, start, warranty)
+    }
+  },
+  gallery: { fields: { media: images | youtube, cat: choice(5),
+             caption: text.i18n, product: ref(products) } },
+  awards:  list(year, icon, title.i18n, by.i18n),
+  reviews: list(quote.i18n, name.i18n, village.i18n)
+}
+
+pages: { hero, subsidy, stats, contact }</pre>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div class="box"><div class="lbl">Suggested stack</div><p style="margin-top:8px;font-size:15px">The site stays a fast static page that reads one <span class="mono">content.json</span>. The admin is a small web app on a hosted backend (for example Supabase: database, photo storage, phone-OTP login). No server for him to maintain.</p></div>
+<div class="box"><div class="lbl">Access</div><p style="margin-top:8px;font-size:15px">Login with mobile number + OTP. Only numbers on an allow-list can sign in. One role (owner) for now; the schema leaves room for a limited staff role later.</p></div>
+<div class="box"><div class="lbl">Safety nets</div><p style="margin-top:8px;font-size:15px">10-second undo after every save. History keeps 30 days of changes and deleted items. A nightly export of <span class="mono">content.json</span> as a backup.</p></div>
+<div class="box"><div class="lbl">Admin language</div><p style="margin-top:8px;font-size:15px">All admin labels live in one strings file (gu + en). The Gujarati labels on these boards are drafts for Pratik to review.</p></div>
+</div>
+</div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3040}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

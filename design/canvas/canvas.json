@@ -1,0 +1,341 @@
+{
+ "v": 3,
+ "attachments": {},
+ "boards": {
+  "Components.dc.html": {
+   "h": 3140,
+   "title": "02 · Components",
+   "w": 1440,
+   "x": 1520,
+   "y": 0
+  },
+  "GalleryDesktop.dc.html": {
+   "h": 2280,
+   "title": "Gallery · Desktop (4 col)",
+   "w": 1440,
+   "x": 0,
+   "y": 15060
+  },
+  "GalleryEmpty.dc.html": {
+   "h": 780,
+   "title": "Gallery · Empty filter",
+   "w": 360,
+   "x": 2400,
+   "y": 18100
+  },
+  "GalleryMobile.dc.html": {
+   "h": 2500,
+   "title": "Gallery · Mobile (2 col)",
+   "w": 360,
+   "x": 2434,
+   "y": 15060
+  },
+  "GalleryTablet.dc.html": {
+   "h": 2620,
+   "title": "Gallery · Tablet (3 col)",
+   "w": 834,
+   "x": 1520,
+   "y": 15060
+  },
+  "HomeDesktop.dc.html": {
+   "h": 4420,
+   "title": "Home · Desktop 1440",
+   "w": 1440,
+   "x": 0,
+   "y": 5380
+  },
+  "HomeMobile.dc.html": {
+   "h": 7760,
+   "title": "Home · Mobile 360",
+   "w": 360,
+   "x": 1520,
+   "y": 5380
+  },
+  "LightboxDesktop.dc.html": {
+   "h": 900,
+   "title": "Lightbox · Desktop",
+   "w": 1440,
+   "x": 0,
+   "y": 18100
+  },
+  "LightboxMobile.dc.html": {
+   "h": 780,
+   "title": "Lightbox · Mobile, model photo",
+   "w": 360,
+   "x": 1520,
+   "y": 18100
+  },
+  "LightboxVideo.dc.html": {
+   "h": 780,
+   "title": "Lightbox · Mobile, video",
+   "w": 360,
+   "x": 1960,
+   "y": 18100
+  },
+  "Main.dc.html": {
+   "h": 4960,
+   "title": "01 · Foundations",
+   "w": 1440,
+   "x": 0,
+   "y": 0
+  },
+  "ProductDesktop.dc.html": {
+   "h": 1080,
+   "title": "Product detail · Desktop dialog",
+   "w": 1440,
+   "x": 0,
+   "y": 13560
+  },
+  "ProductMobile.dc.html": {
+   "h": 992,
+   "title": "Product detail · Mobile sheet",
+   "w": 360,
+   "x": 1520,
+   "y": 13560
+  },
+  "AdminPlan.dc.html": {
+   "x": 0,
+   "y": 19420,
+   "w": 1440,
+   "h": 3040,
+   "title": "05 · Admin plan"
+  },
+  "AdminKit.dc.html": {
+   "x": 1520,
+   "y": 19420,
+   "w": 1440,
+   "h": 2040,
+   "title": "06 · Admin kit"
+  },
+  "AdminLogin.dc.html": {
+   "x": 0,
+   "y": 22880,
+   "w": 360,
+   "h": 780,
+   "title": "Admin · Login (OTP)"
+  },
+  "AdminHomeMobile.dc.html": {
+   "x": 440,
+   "y": 22880,
+   "w": 360,
+   "h": 1090,
+   "title": "Admin · Home · Mobile"
+  },
+  "AdminHomeDesktop.dc.html": {
+   "x": 880,
+   "y": 22880,
+   "w": 1440,
+   "h": 900,
+   "title": "Admin · Home · Desktop"
+  },
+  "AdminProductsMobile.dc.html": {
+   "x": 0,
+   "y": 24390,
+   "w": 360,
+   "h": 800,
+   "title": "Admin · Products · Mobile"
+  },
+  "AdminProductEditMobile.dc.html": {
+   "x": 440,
+   "y": 24390,
+   "w": 360,
+   "h": 2060,
+   "title": "Admin · Edit product · Mobile"
+  },
+  "AdminProductsDesktop.dc.html": {
+   "x": 880,
+   "y": 24390,
+   "w": 1440,
+   "h": 900,
+   "title": "Admin · Products · Desktop"
+  },
+  "AdminProductEditDesktop.dc.html": {
+   "x": 2400,
+   "y": 24390,
+   "w": 1440,
+   "h": 1620,
+   "title": "Admin · Edit product · Desktop"
+  },
+  "AdminGalleryMobile.dc.html": {
+   "x": 0,
+   "y": 26870,
+   "w": 360,
+   "h": 1000,
+   "title": "Admin · Gallery · Mobile"
+  },
+  "AdminPhotoMobile.dc.html": {
+   "x": 440,
+   "y": 26870,
+   "w": 360,
+   "h": 1060,
+   "title": "Admin · Photo details · Mobile"
+  },
+  "AdminContentMobile.dc.html": {
+   "x": 880,
+   "y": 26870,
+   "w": 360,
+   "h": 1400,
+   "title": "Admin · Home page text · Mobile"
+  },
+  "AdminGalleryDesktop.dc.html": {
+   "x": 1320,
+   "y": 26870,
+   "w": 1440,
+   "h": 960,
+   "title": "Admin · Gallery · Desktop"
+  }
+ },
+ "createdOnFiles": {
+  "at": "2026-09-29T07:10:00Z",
+  "v": 1
+ },
+ "designSystems": [],
+ "launch": {
+  "view": "canvas"
+ },
+ "notes": {
+  "n1": {
+   "fill": "orange",
+   "maxH": 620,
+   "size": 24,
+   "text": "PLACEHOLDERS — confirm with Pratik Davda before launch\n\n• Phone / WhatsApp: +91 98765 43210\n• Address: દુકાન નં. ૨૭૦૬, અમરેલી રોડ, ચિતલ – ૩૬૫૬૨૦\n• All prices, specs and stock status\n• Stats: ૧૨+ yrs, ૩,૨૦૦+ deliveries, ૪૫૦+ villages, ૧૨ awards\n• All 5 awards and all 3 testimonials\n• IndiaMART ૫.૦ rating\n• Subsidy amount (૪૦% / ₹૬૦,૦૦૦) — verify on i-Khedut\n\nProduct pictures are the prototype illustrations until real photos arrive.",
+   "w": 380,
+   "x": 1960,
+   "y": 5380
+  },
+  "n2": {
+   "fill": "blue",
+   "maxH": 520,
+   "size": 24,
+   "text": "Behaviour (unchanged from prototype)\n\n• Mobile dock (Call + WhatsApp) slides in once the hero leaves the screen; hidden ≥900 px.\n• Product sheet URL: #p-ID. Back button closes it.\n• WhatsApp message: model name, ID, price, link, then blank “મારું નામ:” and “મારું ગામ:”.\n• Nav collapses below 900 px — on phones the gallery is reached from “વધુ ફોટા જુઓ”.",
+   "w": 380,
+   "x": 1960,
+   "y": 6080
+  },
+  "n3": {
+   "fill": "green",
+   "maxH": 760,
+   "size": 24,
+   "text": "Gallery data — one list the owner edits\n\n{ src: \"photos/lathi-01.webp\",\n  cat: \"delivery\",   // sanedo | impl | delivery | workshop | honours\n  cap: { gu: \"લાઠીમાં ડિલિવરી\", hi: \"लाठी में डिलीवरी\", en: \"Delivered in Lathi\" },\n  product: \"KS-10\",   // optional → shows “આ મોડેલ વિશે પૂછો”\n  youtube: \"VIDEO_ID\" // optional → video tile\n}\n\n• Tiles: 1:1, 12 px radius, wash placeholder while lazy-loading. Export photos ~1200 px WebP, ≤150 KB.\n• Each photo gets #g-N; back button closes the lightbox.\n• Swipe on touch, ← → and Esc on keyboard.\n• Counter uses the locale’s numerals: ૩ / ૨૪.",
+   "w": 420,
+   "x": 2874,
+   "y": 15060
+  },
+  "n4": {
+   "fill": "gray",
+   "maxH": 420,
+   "size": 24,
+   "text": "Draft Gujarati copy for review\n(new strings not in the prototype)\n\n• Subtitle: વર્કશૉપથી ખેતર સુધી: અમારા સનેડા, ગામેગામ ડિલિવરી અને સન્માનની ઝલક.\n• Empty-state button: બધા ફોટા જુઓ\n• Captions and village labels\n\nHindi and English versions to be written, not machine-translated.",
+   "w": 340,
+   "x": 2840,
+   "y": 18100
+  },
+  "t1": {
+   "kind": "title1",
+   "maxW": 2960,
+   "text": "Design language",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "t2": {
+   "kind": "title1",
+   "maxW": 1880,
+   "text": "Home — web & mobile",
+   "w": 240,
+   "x": 0,
+   "y": 5080
+  },
+  "t3": {
+   "kind": "title1",
+   "maxW": 1880,
+   "text": "Product detail",
+   "w": 240,
+   "x": 0,
+   "y": 13260
+  },
+  "t4": {
+   "kind": "title1",
+   "maxW": 2794,
+   "text": "Gallery (new page)",
+   "w": 240,
+   "x": 0,
+   "y": 14760
+  },
+  "t5": {
+   "kind": "title1",
+   "maxW": 2760,
+   "text": "Gallery lightbox & states",
+   "w": 240,
+   "x": 0,
+   "y": 17800
+  },
+  "a1": {
+   "x": 0,
+   "y": 19120,
+   "text": "Admin panel — plan & template kit",
+   "kind": "title1",
+   "maxW": 2960
+  },
+  "a2": {
+   "x": 0,
+   "y": 22580,
+   "text": "Admin — sign in & home",
+   "kind": "title1",
+   "maxW": 2320
+  },
+  "a3": {
+   "x": 0,
+   "y": 24090,
+   "text": "Admin — products",
+   "kind": "title1",
+   "maxW": 3840
+  },
+  "a4": {
+   "x": 0,
+   "y": 26570,
+   "text": "Admin — gallery & page text",
+   "kind": "title1",
+   "maxW": 2760
+  },
+  "a5": {
+   "x": 2400,
+   "y": 22880,
+   "w": 400,
+   "maxH": 640,
+   "fill": "gray",
+   "size": 24,
+   "text": "Admin copy is a draft\n\nAll Gujarati labels in the admin are new (not from the prototype). Pratik should read them once before build.\n\nKey words: સાચવો · રદ કરો · પાછું લો · કાઢી નાખો · પ્રિવ્યૂ · બાકી કામ · ફેરફારનો ઇતિહાસ\n\nInputs accept 0–9 (phone keyboards); the site shows Gujarati numerals."
+  }
+ },
+ "order": [
+  "Main.dc.html",
+  "Components.dc.html",
+  "HomeDesktop.dc.html",
+  "HomeMobile.dc.html",
+  "ProductDesktop.dc.html",
+  "ProductMobile.dc.html",
+  "GalleryDesktop.dc.html",
+  "GalleryTablet.dc.html",
+  "GalleryMobile.dc.html",
+  "LightboxDesktop.dc.html",
+  "LightboxMobile.dc.html",
+  "LightboxVideo.dc.html",
+  "GalleryEmpty.dc.html",
+  "AdminPlan.dc.html",
+  "AdminKit.dc.html",
+  "AdminLogin.dc.html",
+  "AdminHomeMobile.dc.html",
+  "AdminHomeDesktop.dc.html",
+  "AdminProductsMobile.dc.html",
+  "AdminProductEditMobile.dc.html",
+  "AdminProductsDesktop.dc.html",
+  "AdminProductEditDesktop.dc.html",
+  "AdminGalleryMobile.dc.html",
+  "AdminPhotoMobile.dc.html",
+  "AdminContentMobile.dc.html",
+  "AdminGalleryDesktop.dc.html"
+ ],
+ "pages": [],
+ "title": "Davada Agro Industries — Website"
+}

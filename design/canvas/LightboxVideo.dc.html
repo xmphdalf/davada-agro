@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<title>ગેલેરી વિડિયો — મોબાઇલ</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Gujarati:wdth,wght@75..125,500..800&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#10142C;color:#FFFFFF;font-family:"Hind Vadodara","Noto Sans Gujarati",system-ui,sans-serif;font-size:17px;line-height:1.7}
+*{box-sizing:border-box}
+p{margin:0}
+button{font:inherit;color:inherit}
+.d{font-family:"Anek Gujarati","Hind Vadodara",sans-serif;font-stretch:92%}
+.ib{width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.12);display:grid;place-items:center;cursor:pointer;color:#FFFFFF}
+</style>
+</helmet>
+<div role="dialog" aria-label="ફોટો ગેલેરી" style="width:360px;height:780px;background:#10142C;display:flex;flex-direction:column">
+
+<div style="height:64px;flex:none;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 12px">
+<div><button class="ib" aria-label="લિંક શેર કરો"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg></button></div>
+<span class="d" aria-live="polite" style="font-size:17px;font-weight:600">૧૦ / ૨૪</span>
+<div style="display:flex;justify-content:flex-end"><button class="ib" aria-label="બંધ કરો"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+</div>
+
+<div style="flex-grow:1;display:flex;align-items:center">
+<div style="width:360px;height:203px;background:#000000;position:relative;display:grid;place-items:center">
+<button aria-label="વિડિયો ચલાવો" style="width:64px;height:64px;border-radius:50%;border:0;background:#FFFFFF;display:grid;place-items:center;cursor:pointer"><svg width="26" height="26" viewBox="0 0 24 24" fill="#10142C" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></button>
+<span style="position:absolute;left:10px;top:8px;font-size:11px;color:#A6AABA;font-family:Hind,sans-serif;letter-spacing:.04em">YOUTUBE EMBED · 16:9 · NO-COOKIE</span>
+<div aria-hidden="true" style="position:absolute;left:12px;right:12px;bottom:12px;height:3px;border-radius:3px;background:rgba(255,255,255,.25)"></div>
+</div>
+</div>
+
+<div style="flex:none;padding:0 20px 36px;display:flex;flex-direction:column;gap:4px">
+<p style="font-size:19px;font-weight:600">ડિલિવરીનો દિવસ, અમરેલી</p>
+<p style="font-size:15px;color:#A6AABA">ડિલિવરી · ૦:૫૮</p>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":360,"height":780}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

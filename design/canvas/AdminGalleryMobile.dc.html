@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<title>ઍડમિન — ગેલેરી (મોબાઇલ)</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Gujarati:wdth,wght@75..125,500..800&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#F4F4F8;color:#1C1F26;font-family:"Hind Vadodara","Noto Sans Gujarati",system-ui,sans-serif;font-size:16px;line-height:1.6}
+*{box-sizing:border-box}
+h1,h2,h3{margin:0;font-family:"Anek Gujarati","Hind Vadodara",sans-serif;font-stretch:92%;font-weight:700;line-height:1.25}
+p{margin:0}
+a{color:inherit}
+button{font:inherit;color:inherit}
+.hint{font-size:14px;color:#5B6070;line-height:1.5}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 16px;border-radius:12px;font-weight:600;font-size:16px;text-decoration:none;border:0;cursor:pointer;white-space:nowrap}
+.btn svg{width:20px;height:20px;flex:none}
+.bk{background:#E07B16;color:#1B1206}
+.bg{background:#FFFFFF;border:1.5px solid #E3E3EA;color:#1C1F26}
+.chip{flex:none;height:44px;padding:0 14px;border-radius:999px;border:1.5px solid #E3E3EA;background:#FFFFFF;font-weight:500;white-space:nowrap;cursor:pointer}
+.chip.on{background:#19203F;border-color:#19203F;color:#FFFFFF}
+.tile{position:relative;display:grid;place-items:center;aspect-ratio:1;border-radius:10px;overflow:hidden;text-decoration:none}
+.tab{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;text-decoration:none;color:#5B6070;font-size:13px}
+</style>
+</helmet>
+<div style="width:360px;height:1000px;background:#F4F4F8;display:flex;flex-direction:column;position:relative;overflow:hidden">
+
+<header style="height:56px;background:#FFFFFF;border-bottom:1px solid #E3E3EA;display:flex;align-items:center;padding:0 16px;flex:none">
+<h1 style="font-size:20px;margin-right:auto">ગેલેરી <span class="hint" style="font-weight:400">· ૨૪</span></h1>
+</header>
+
+<main style="padding:16px 0 100px;display:flex;flex-direction:column;gap:14px">
+<div style="display:grid;grid-template-columns:1.3fr 1fr;gap:10px;padding:0 16px">
+<button class="btn bk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13.5" r="3.5"/></svg>ફોટો ઉમેરો</button>
+<button class="btn bg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>વિડિયો</button>
+</div>
+<div role="group" aria-label="વિભાગ" style="display:flex;gap:8px;overflow:hidden;padding:2px 16px">
+<button class="chip on" aria-pressed="true">બધા</button><button class="chip" aria-pressed="false">સનેડા</button><button class="chip" aria-pressed="false">ટ્રોલી અને ઓજારો</button><button class="chip" aria-pressed="false">ડિલિવરી</button>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:0 16px">
+<sc-for list="{{items}}" as="g" hint-placeholder-count="18">
+<a class="tile" href="AdminPhotoMobile.dc.html" aria-label="{{g.cap}}" style="background:{{g.bg}}">
+<sc-if value="{{g.model}}" hint-placeholder-val="{{false}}"><img src="{{g.img}}" alt="" style="width:86%"></sc-if>
+<sc-if value="{{g.photo}}" hint-placeholder-val="{{false}}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8E92A3" stroke-width="1.4" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M4 17l5-4.5 3.5 3 3-2.5L20 17"/></svg></sc-if>
+<sc-if value="{{g.video}}" hint-placeholder-val="{{false}}"><span style="width:34px;height:34px;border-radius:50%;background:#FFFFFF;display:grid;place-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="#19203F" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></span></sc-if>
+<sc-if value="{{g.up}}" hint-placeholder-val="{{false}}"><svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="15" fill="none" stroke="#E3E3EA" stroke-width="3.5"/><circle cx="18" cy="18" r="15" fill="none" stroke="#19203F" stroke-width="3.5" stroke-dasharray="{{g.dash}}" stroke-linecap="round" transform="rotate(-90 18 18)"/></svg></sc-if>
+<sc-if value="{{g.miss}}" hint-placeholder-val="{{false}}"><span aria-label="કૅપ્શન બાકી" style="position:absolute;right:6px;top:6px;width:10px;height:10px;border-radius:50%;background:#FFFFFF;border:2px solid #B85E08"></span></sc-if>
+</a>
+</sc-for>
+</div>
+<p class="hint" style="padding:0 16px;display:flex;gap:8px;align-items:center"><span style="width:10px;height:10px;border-radius:50%;border:2px solid #B85E08;flex:none"></span>આ ફોટામાં કોઈ ભાષાનું કૅપ્શન બાકી છે</p>
+</main>
+
+<div style="position:absolute;left:12px;right:12px;bottom:80px;background:#19203F;color:#FFFFFF;border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:12px">
+<svg width="22" height="22" viewBox="0 0 36 36" aria-hidden="true" style="flex:none"><circle cx="18" cy="18" r="14" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="4"/><circle cx="18" cy="18" r="14" fill="none" stroke="#F4A94E" stroke-width="4" stroke-dasharray="58 88" stroke-linecap="round" transform="rotate(-90 18 18)"/></svg>
+<span style="flex-grow:1;font-size:15px">૩ માંથી ૨ ફોટા અપલોડ થયા</span>
+</div>
+
+<nav aria-label="ઍડમિન" style="position:absolute;left:0;right:0;bottom:0;height:68px;background:#FFFFFF;border-top:1px solid #E3E3EA;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));padding-bottom:4px">
+<a href="AdminHomeMobile.dc.html" class="tab"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>મુખ્ય</a>
+<a href="AdminProductsMobile.dc.html" class="tab"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="16.5" r="3"/><circle cx="17.5" cy="17.5" r="2"/><path d="M7 13.5V8h5l2.5 6H20v3.5M10 8V5"/></svg>સનેડા</a>
+<a href="#" class="tab" aria-current="page" style="color:#19203F;font-weight:600"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M4 17l5-4.5 3.5 3 3-2.5L20 17"/></svg>ગેલેરી</a>
+<a href="#" class="tab"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="5.5" cy="12" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="18.5" cy="12" r="1.8"/></svg>વધુ</a>
+</nav>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":360,"height":1000}}'>
+class Component extends DCLogic {
+renderVals() {
+const IMG = { 'KS-07':'../assets/KS-07.svg', 'KS-10':'../assets/KS-10.svg', 'KS-12':'../assets/KS-12.svg', 'KB-10':'../assets/KB-10.svg', 'KT-15':'../assets/KT-15.svg', 'KC-05':'../assets/KC-05.svg' };
+const G = [
+['up',null,'અપલોડ થાય છે',0,'40 95'],['photo',null,'નવો ફોટો',1],['photo',null,'નવો ફોટો',1],
+['model','KS-12','દવડા બુલેટ ૧૨'],['photo',null,'લાઠીમાં ડિલિવરી',1],['model','KS-10','દવડા શક્તિ ૧૦'],
+['photo',null,'અમારો વર્કશૉપ, ચિતલ'],['video',null,'દવડા બુલેટ ૧૨ ખેતરમાં'],['model','KT-15','હાઇડ્રોલિક ટ્રોલી',1],
+['photo',null,'બાબરામાં ડિલિવરી',1],['photo',null,'શ્રેષ્ઠ કૃષિ સાધન ઉત્પાદક, ૨૦૨૪'],['model','KB-10','મિની બુલેટ ટ્રેક્ટર ૧૦'],
+['video',null,'ડિલિવરીનો દિવસ, અમરેલી'],['model','KS-07','દવડા સાથી ૭'],['photo',null,'સનેડાની ચકાસણી',1],
+['model','KC-05','કલ્ટિવેટર'],['photo',null,'ચિતલમાં ડિલિવરી',1],['photo',null,'ખેતરમાં સનેડો']
+];
+const BG = { model:'#FFFFFF', photo:'#ECEDF3', video:'#19203F', up:'#ECEDF3' };
+return { items: G.map(([k,id,cap,miss,dash]) => ({ model:k==='model', photo:k==='photo', video:k==='video', up:k==='up', img:id?IMG[id]:'', cap, miss:!!miss, dash:dash||'', bg:BG[k] })) };
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<title>Admin kit — template components</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Gujarati:wdth,wght@75..125,500..800&amp;family=Anek+Latin:wdth,wght@75..125,500..800&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;family=Hind:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#FFFFFF;color:#1C1F26;font-family:"Hind Vadodara","Noto Sans Gujarati",system-ui,sans-serif;font-size:16px;line-height:1.6}
+*{box-sizing:border-box}
+h1,h2,h3{margin:0;font-family:"Anek Gujarati","Hind Vadodara",sans-serif;font-stretch:92%;font-weight:700;line-height:1.25}
+p{margin:0}
+a{color:inherit}
+button,input,textarea{font:inherit;color:inherit}
+.dh{font-family:"Anek Latin","Hind",sans-serif;font-stretch:92%;font-weight:700}
+.doc{font-family:"Hind",sans-serif}
+.lblx{font-family:"Hind",sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#5B6070;font-weight:600;line-height:1.4}
+.cap{font-family:"Hind",sans-serif;font-size:13px;color:#5B6070;line-height:1.4}
+.sec{display:grid;grid-template-columns:260px minmax(0,1fr);gap:48px;padding:56px 96px;border-top:1px solid #E3E3EA}
+.col{display:flex;flex-direction:column;gap:10px}
+.fl{font-size:15px;font-weight:600}
+.hint{font-size:14px;color:#5B6070;line-height:1.5}
+.inp{height:48px;border:1.5px solid #8E92A3;border-radius:10px;padding:0 14px;background:#FFFFFF;width:100%;color:#1C1F26;display:flex;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 20px;border-radius:12px;font-weight:600;font-size:16px;text-decoration:none;border:0;cursor:pointer;white-space:nowrap}
+.btn svg{width:20px;height:20px;flex:none}
+.bk{background:#E07B16;color:#1B1206}
+.bi{background:#19203F;color:#FFFFFF}
+.bg{background:#FFFFFF;border:1.5px solid #E3E3EA;color:#1C1F26}
+.bd{background:#FFFFFF;border:1.5px solid #E3E3EA;color:#B3261E}
+.chip{flex:none;height:44px;padding:0 16px;border-radius:999px;border:1.5px solid #E3E3EA;background:#FFFFFF;font-weight:500;white-space:nowrap;cursor:pointer}
+.chip.on{background:#19203F;border-color:#19203F;color:#FFFFFF}
+.seg{display:flex;background:#F4F4F8;border-radius:10px;padding:4px;gap:4px}
+.seg button{flex:1;height:38px;border:0;border-radius:8px;background:transparent;font-weight:500;display:flex;align-items:center;justify-content:center;gap:6px;cursor:pointer}
+.seg button.on{background:#FFFFFF;box-shadow:0 0 0 1px #E3E3EA;font-weight:600}
+.ok{width:7px;height:7px;border-radius:50%;background:#19203F}
+.miss{width:7px;height:7px;border-radius:50%;border:1.5px solid #B85E08}
+.sw{width:46px;height:28px;border-radius:999px;border:0;padding:3px;background:#C9CBDD;display:flex;cursor:pointer;flex:none}
+.sw span{width:22px;height:22px;border-radius:50%;background:#FFFFFF}
+.sw.on{background:#19203F;justify-content:flex-end}
+.trow{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:56px;padding:6px 0}
+.card{background:#FFFFFF;border:1px solid #E3E3EA;border-radius:14px}
+</style>
+</helmet>
+<div style="width:1440px;height:2040px;background:#FFFFFF;display:flex;flex-direction:column">
+
+<div style="padding:72px 96px 48px;display:flex;justify-content:space-between;align-items:flex-end">
+<div class="col"><span class="lblx">04 · Admin kit</span><h1 class="dh" style="font-size:56px;line-height:1.05">Fields, rows and feedback.</h1></div>
+<p class="doc" style="max-width:54ch;font-size:15px;color:#5B6070">The whole admin is built from these parts. They reuse the site's tokens; the admin adds one colour, Danger #B3261E (6.6:1 on white), only for delete. Inputs get a darker border (#8E92A3, 3.2:1) so the boxes stay visible in sunlight.</p>
+</div>
+
+<!-- Inputs -->
+<div class="sec">
+<div class="col"><span class="lblx">Inputs</span><h2 class="dh" style="font-size:28px">Text &amp; language</h2><p class="doc hint">Label above, hint below, never placeholder-only. Translated fields carry a language switch; a hollow kesar dot marks a language not yet written.</p></div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px">
+<div class="col"><span class="lblx">Default</span>
+<label class="fl">મોબાઇલ નંબર</label>
+<div class="inp" style="gap:10px"><span style="color:#5B6070">+91</span><span>98765 43210</span></div>
+</div>
+<div class="col"><span class="lblx">Focus</span>
+<label class="fl">મુખ્ય હેડિંગ</label>
+<div class="inp" style="border-color:#19203F;box-shadow:0 0 0 3px rgba(224,123,22,.45)">ખેતરથી બજાર સુધી, ભરોસાનો સાથી</div>
+<div style="display:flex;justify-content:space-between" class="hint"><span>ટૂંકું રાખો, ફોનમાં ૩ લીટીથી વધુ ન થાય</span><span>૩૨ / ૪૦</span></div>
+</div>
+<div class="col"><span class="lblx">Error</span>
+<label class="fl">એક્સ-શોરૂમ કિંમત</label>
+<div class="inp" style="border-color:#B3261E;gap:8px"><span style="color:#5B6070">₹</span><span>1,65,0OO</span></div>
+<div class="hint" style="color:#B3261E;display:flex;gap:6px;align-items:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.5"/></svg>ફક્ત આંકડા લખો</div>
+</div>
+
+<div class="col" style="grid-column:span 2"><span class="lblx">Translated field · text.i18n</span>
+<div style="display:flex;justify-content:space-between;align-items:center"><label class="fl">નામ</label></div>
+<div class="seg" role="tablist" aria-label="ભાષા">
+<button class="on" role="tab" aria-selected="true"><span class="ok"></span>ગુજરાતી</button>
+<button role="tab" aria-selected="false" style="font-family:Hind,sans-serif"><span class="miss"></span>हिंदी</button>
+<button role="tab" aria-selected="false" style="font-family:Hind,sans-serif"><span class="ok"></span>English</button>
+</div>
+<div class="inp">દવડા શક્તિ</div>
+<div class="hint" style="display:flex;gap:6px;align-items:center;color:#B85E08"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.5"/></svg>હિન્દી લખાણ બાકી છે. ત્યાં સુધી સાઇટ પર ગુજરાતી લખાણ દેખાશે.</div>
+</div>
+<div class="col"><span class="lblx">Money</span>
+<label class="fl">એક્સ-શોરૂમ કિંમત</label>
+<div class="inp" style="gap:8px"><span style="color:#5B6070">₹</span><span>165000</span></div>
+<div class="hint">સાઇટ પર: <b style="color:#1C1F26">₹૧,૬૫,૦૦૦</b></div>
+</div>
+
+<div class="col"><span class="lblx">Number + unit</span>
+<label class="fl">પાવર</label>
+<div class="inp" style="justify-content:space-between"><span>10</span><span style="color:#5B6070">HP</span></div>
+</div>
+<div class="col"><span class="lblx">Choice</span>
+<span class="fl">વિભાગ</span>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><button class="chip on" aria-pressed="true">ત્રણ પૈડાં</button><button class="chip" aria-pressed="false">ચાર પૈડાં</button><button class="chip" aria-pressed="false">ઓજારો અને ટ્રોલી</button></div>
+</div>
+<div class="col"><span class="lblx">Reference</span>
+<label class="fl">ફોટામાં કયું મોડેલ છે?</label>
+<div class="inp" style="justify-content:space-between"><span>દવડા શક્તિ ૧૦ <span style="color:#5B6070">· KS-10</span></span><svg width="14" height="14" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5l3 3 3-3" stroke="#1C1F26" stroke-width="1.5" fill="none"/></svg></div>
+</div>
+</div>
+</div>
+
+<!-- Toggles & lists -->
+<div class="sec">
+<div class="col"><span class="lblx">Rows</span><h2 class="dh" style="font-size:28px">Switches &amp; lists</h2><p class="doc hint">The whole row is the tap target. Switch “on” is indigo, never green. Lists reorder with the handle, so a stray scroll doesn't reshuffle anything.</p></div>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px">
+<div class="col"><span class="lblx">Toggle rows</span>
+<div class="card" style="padding:4px 18px">
+<div class="trow" style="border-bottom:1px solid #E3E3EA"><div><div class="fl">સ્ટૉકમાં છે</div><div class="hint">બંધ કરશો તો “ઑર્ડર પર તૈયાર” દેખાશે</div></div><button class="sw on" role="switch" aria-checked="true" aria-label="સ્ટૉકમાં છે"><span></span></button></div>
+<div class="trow"><div><div class="fl">સૌથી વધુ વેચાતો</div><div class="hint">કાર્ડ પર કેસરી ટૅગ દેખાશે</div></div><button class="sw" role="switch" aria-checked="false" aria-label="સૌથી વધુ વેચાતો"><span></span></button></div>
+</div>
+</div>
+<div class="col"><span class="lblx">List rows · drag to reorder</span>
+<div class="card">
+<div style="display:flex;align-items:center;gap:12px;padding:10px 14px;border-bottom:1px solid #E3E3EA">
+<button aria-label="ક્રમ બદલો" style="width:32px;height:44px;border:0;background:none;display:grid;place-items:center;cursor:grab;flex:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="#8E92A3" aria-hidden="true"><circle cx="9" cy="6" r="1.5"/><circle cx="15" cy="6" r="1.5"/><circle cx="9" cy="12" r="1.5"/><circle cx="15" cy="12" r="1.5"/><circle cx="9" cy="18" r="1.5"/><circle cx="15" cy="18" r="1.5"/></svg></button>
+<div style="width:52px;height:52px;border-radius:10px;background:#F4F4F8;display:grid;place-items:center;flex:none"><img src="../assets/KS-10.svg" alt="" style="width:46px"></div>
+<div style="flex-grow:1;min-width:0"><div class="fl">દવડા શક્તિ ૧૦</div><div class="hint">₹૧,૬૫,૦૦૦</div></div>
+<button class="sw on" role="switch" aria-checked="true" aria-label="સ્ટૉક"><span></span></button>
+</div>
+<div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:#F4F4F8">
+<button aria-label="ક્રમ બદલો" style="width:32px;height:44px;border:0;background:none;display:grid;place-items:center;cursor:grabbing;flex:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="#19203F" aria-hidden="true"><circle cx="9" cy="6" r="1.5"/><circle cx="15" cy="6" r="1.5"/><circle cx="9" cy="12" r="1.5"/><circle cx="15" cy="12" r="1.5"/><circle cx="9" cy="18" r="1.5"/><circle cx="15" cy="18" r="1.5"/></svg></button>
+<div style="width:52px;height:52px;border-radius:10px;background:#FFFFFF;display:grid;place-items:center;flex:none"><img src="../assets/KS-12.svg" alt="" style="width:46px"></div>
+<div style="flex-grow:1;min-width:0"><div class="fl">દવડા બુલેટ ૧૨</div><div class="hint">ખસેડી રહ્યા છો…</div></div>
+<button class="sw on" role="switch" aria-checked="true" aria-label="સ્ટૉક"><span></span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Photos -->
+<div class="sec">
+<div class="col"><span class="lblx">Media</span><h2 class="dh" style="font-size:28px">Photo picker</h2><p class="doc hint">Opens the phone camera or gallery. The first photo is the main one. Photos upload in the background, so he can keep filling the form.</p></div>
+<div style="display:flex;gap:14px;align-items:flex-start">
+<div class="col" style="width:120px"><div style="position:relative;width:120px;height:120px;border-radius:12px;background:#F4F4F8;display:grid;place-items:center"><img src="../assets/KS-10.svg" alt="" style="width:100px"><span style="position:absolute;left:8px;top:8px;background:#19203F;color:#FFFFFF;font-size:12.5px;font-weight:600;padding:0 8px;border-radius:6px;line-height:1.7">મુખ્ય</span></div><span class="cap">Main photo</span></div>
+<div class="col" style="width:120px"><div style="position:relative;width:120px;height:120px;border-radius:12px;background:#ECEDF3;display:grid;place-items:center"><svg width="52" height="52" viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="15" fill="none" stroke="#E3E3EA" stroke-width="3.5"/><circle cx="18" cy="18" r="15" fill="none" stroke="#19203F" stroke-width="3.5" stroke-dasharray="57 95" stroke-linecap="round" transform="rotate(-90 18 18)"/></svg><span style="position:absolute;bottom:8px;font-size:13px;color:#5B6070">૬૦%</span></div><span class="cap">Uploading</span></div>
+<div class="col" style="width:120px"><div style="position:relative;width:120px;height:120px;border-radius:12px;background:#ECEDF3;display:grid;place-items:center;border:1.5px solid #B3261E"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#B3261E" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.5"/></svg><span style="position:absolute;bottom:6px;font-size:13px;color:#B3261E;font-weight:600">ફરી પ્રયાસ કરો</span></div><span class="cap">Failed, tap to retry</span></div>
+<div class="col" style="width:120px"><button style="width:120px;height:120px;border-radius:12px;border:1.5px dashed #8E92A3;background:#FFFFFF;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;cursor:pointer"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#19203F" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13.5" r="3.5"/></svg><span style="font-weight:600;font-size:15px">ફોટો ઉમેરો</span></button><span class="cap">Add</span></div>
+<div class="col" style="flex-grow:1"><span class="lblx">Desktop drop zone</span>
+<div style="height:120px;border-radius:12px;border:1.5px dashed #8E92A3;display:flex;align-items:center;justify-content:center;gap:12px;background:#FFFFFF"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#19203F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg><span>ફોટા અહીં ખેંચીને મૂકો, અથવા <a href="#" style="font-weight:600;text-underline-offset:4px">પસંદ કરો</a></span></div>
+</div>
+</div>
+</div>
+
+<!-- Feedback -->
+<div class="sec">
+<div class="col"><span class="lblx">Feedback</span><h2 class="dh" style="font-size:28px">Saving, undo, delete</h2><p class="doc hint">The save bar is sticky at the bottom of every form and only turns kesar when something has changed. After saving, a toast confirms and offers undo for 10 seconds.</p></div>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;align-items:start">
+<div class="col"><span class="lblx">Save bar · nothing changed / unsaved</span>
+<div class="card" style="padding:12px 14px;display:flex;align-items:center;gap:12px"><span class="hint" style="flex-grow:1">બધું સચવાયેલું છે</span><button class="btn" disabled="" style="background:#F4F4F8;color:#8E92A3;cursor:default">સાચવો</button></div>
+<div class="card" style="padding:12px 14px;display:flex;align-items:center;gap:12px"><span style="flex-grow:1;font-weight:500">ફેરફાર હજી સાચવ્યા નથી</span><button class="btn bg">રદ કરો</button><button class="btn bk">સાચવો</button></div>
+</div>
+<div class="col"><span class="lblx">Toast · saved, with undo</span>
+<div style="background:#19203F;color:#FFFFFF;border-radius:12px;padding:10px 10px 10px 16px;display:flex;align-items:center;gap:12px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F4A94E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+<span style="flex-grow:1">સાચવ્યું. સાઇટ પર દેખાય છે.</span>
+<button style="height:44px;padding:0 14px;border:0;border-radius:8px;background:rgba(255,255,255,.12);color:#FFFFFF;font-weight:600;cursor:pointer">પાછું લો</button>
+</div>
+<span class="lblx" style="margin-top:12px">Offline</span>
+<div style="background:#FCEBD6;border-radius:12px;padding:12px 16px;display:flex;gap:10px;align-items:flex-start"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B85E08" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="flex:none;margin-top:3px"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.5"/></svg><span>ઇન્ટરનેટ નથી. નેટ આવે પછી ફરી “સાચવો” દબાવો. તમારું લખાણ ફોર્મમાં જ રહેશે.</span></div>
+</div>
+<div class="col"><span class="lblx">Confirm delete</span>
+<div role="dialog" aria-labelledby="dlgT" style="width:340px;border-radius:18px;background:#FFFFFF;border:1px solid #E3E3EA;padding:22px;display:flex;flex-direction:column;gap:12px">
+<h3 id="dlgT" style="font-size:20px">આ ફોટો કાઢી નાખવો છે?</h3>
+<p class="hint">કાઢી નાખ્યા પછી ૩૦ દિવસ સુધી “ફેરફારનો ઇતિહાસ”માંથી પાછો લાવી શકાશે.</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px"><button class="btn bg">રદ કરો</button><button class="btn" style="background:#B3261E;color:#FFFFFF">કાઢી નાખો</button></div>
+</div>
+</div>
+<div class="col"><span class="lblx">Navigation · phone tab bar / desktop sidebar item</span>
+<nav aria-label="ઍડમિન" style="width:360px;border:1px solid #E3E3EA;border-radius:14px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));height:64px;background:#FFFFFF">
+<a href="#" aria-current="page" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;text-decoration:none;color:#19203F;font-weight:600;font-size:13px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>મુખ્ય</a>
+<a href="#" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;text-decoration:none;color:#5B6070;font-size:13px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="16.5" r="3"/><circle cx="17.5" cy="17.5" r="2"/><path d="M7 13.5V8h5l2.5 6H20v3.5M10 8V5"/></svg>સનેડા</a>
+<a href="#" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;text-decoration:none;color:#5B6070;font-size:13px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M4 17l5-4.5 3.5 3 3-2.5L20 17"/></svg>ગેલેરી</a>
+<a href="#" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;text-decoration:none;color:#5B6070;font-size:13px"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="5.5" cy="12" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="18.5" cy="12" r="1.8"/></svg>વધુ</a>
+</nav>
+<div style="width:248px;background:#10142C;border-radius:14px;padding:10px;display:flex;flex-direction:column;gap:4px;margin-top:8px">
+<a href="#" aria-current="page" style="height:44px;border-radius:10px;padding:0 12px;display:flex;align-items:center;gap:10px;text-decoration:none;background:rgba(255,255,255,.1);color:#FFFFFF;font-weight:600">સનેડા</a>
+<a href="#" style="height:44px;border-radius:10px;padding:0 12px;display:flex;align-items:center;gap:10px;text-decoration:none;color:#C9CBDD">ગેલેરી</a>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2040}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<title>ઍડમિન — સનેડામાં ફેરફાર (ડેસ્કટૉપ)</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Gujarati:wdth,wght@75..125,500..800&amp;family=Anek+Devanagari:wdth,wght@75..125,500..800&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;family=Hind:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0;background:#F4F4F8;color:#1C1F26;font-family:"Hind Vadodara","Noto Sans Gujarati",system-ui,sans-serif;font-size:16px;line-height:1.6}
+*{box-sizing:border-box}
+h1,h2,h3{margin:0;font-family:"Anek Gujarati","Hind Vadodara",sans-serif;font-stretch:92%;font-weight:700;line-height:1.25}
+p{margin:0}
+a{color:inherit}
+button{font:inherit;color:inherit}
+dl,dd{margin:0}
+.d{font-family:"Anek Gujarati","Hind Vadodara",sans-serif;font-stretch:92%}
+.hint{font-size:14px;color:#5B6070;line-height:1.5}
+.card{background:#FFFFFF;border:1px solid #E3E3EA;border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:16px}
+.card h2{font-size:18px}
+.f{display:flex;flex-direction:column;gap:6px}
+.fl{font-size:15px;font-weight:600}
+.inp{min-height:48px;border:1.5px solid #8E92A3;border-radius:10px;padding:10px 14px;background:#FFFFFF;width:100%;display:flex;align-items:center;gap:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 18px;border-radius:12px;font-weight:600;font-size:16px;text-decoration:none;border:0;cursor:pointer;white-space:nowrap}
+.btn svg{width:18px;height:18px;flex:none}
+.bk{background:#E07B16;color:#1B1206}
+.bg{background:#FFFFFF;border:1.5px solid #E3E3EA;color:#1C1F26}
+.bw{background:#1DA851;color:#FFFFFF;font-size:19px;font-weight:700;min-height:52px;border-radius:14px}
+.chip{flex:none;height:44px;padding:0 16px;border-radius:999px;border:1.5px solid #E3E3EA;background:#FFFFFF;font-weight:500;white-space:nowrap;cursor:pointer}
+.chip.on{background:#19203F;border-color:#19203F;color:#FFFFFF}
+.seg{display:flex;background:#F4F4F8;border-radius:10px;padding:4px;gap:4px}
+.seg button{flex:1;height:38px;border:0;border-radius:8px;background:transparent;font-weight:500;display:flex;align-items:center;justify-content:center;gap:6px;cursor:pointer;font-size:15px}
+.seg button.on{background:#FFFFFF;box-shadow:0 0 0 1px #E3E3EA;font-weight:600}
+.ok{width:7px;height:7px;border-radius:50%;background:#19203F}
+.miss{width:7px;height:7px;border-radius:50%;border:1.5px solid #B85E08}
+.sw{width:46px;height:28px;border-radius:999px;border:0;padding:3px;background:#C9CBDD;display:flex;cursor:pointer;flex:none}
+.sw span{width:22px;height:22px;border-radius:50%;background:#FFFFFF}
+.sw.on{background:#19203F;justify-content:flex-end}
+.trow{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:56px}
+.unit{color:#5B6070;margin-left:auto}
+.side a{height:44px;border-radius:10px;padding:0 12px;display:flex;align-items:center;gap:12px;text-decoration:none;color:#C9CBDD}
+.side a.on{background:rgba(255,255,255,.1);color:#FFFFFF;font-weight:600}
+.side svg{width:20px;height:20px;flex:none}
+.grp{font-size:12.5px;color:#8E92A3;padding:14px 12px 4px}
+</style>
+</helmet>
+<div style="width:1440px;height:1620px;background:#F4F4F8;display:flex">
+
+<aside class="side" style="width:248px;flex:none;background:#10142C;color:#FFFFFF;padding:18px 12px;display:flex;flex-direction:column;gap:2px">
+<div style="display:flex;align-items:center;gap:10px;padding:4px 8px 18px">
+<svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true" style="width:34px;height:34px"><rect width="40" height="40" rx="10" fill="#19203F"/><path d="M13 32c0-7 3-13 6-17h2c3 4 6 10 6 17z" fill="#E07B16"/><ellipse cx="20" cy="14.5" rx="3" ry="1.2" fill="#E07B16"/><path d="M20 13V6l6 1.6L20 9" fill="#F4A94E" stroke="#F4A94E" stroke-width=".6"/></svg>
+<div style="display:flex;flex-direction:column"><b class="d" style="font-size:17px;line-height:1.2">દવડા ઍગ્રો</b><span style="font-size:13px;color:#A6AABA">વેબસાઇટ ઍડમિન</span></div>
+</div>
+<nav aria-label="ઍડમિન" style="display:flex;flex-direction:column;gap:2px">
+<a href="AdminHomeDesktop.dc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>મુખ્ય</a>
+<a href="AdminProductsDesktop.dc.html" class="on" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="16.5" r="3"/><circle cx="17.5" cy="17.5" r="2"/><path d="M7 13.5V8h5l2.5 6H20v3.5M10 8V5"/></svg>સનેડા</a>
+<a href="AdminGalleryDesktop.dc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M4 17l5-4.5 3.5 3 3-2.5L20 17"/></svg>ગેલેરી</a>
+<span class="grp">વેબસાઇટ લખાણ</span>
+<a href="#">હોમ પેજ લખાણ</a><a href="#">સરકારી સહાય</a><a href="#">આંકડા</a><a href="#">સિદ્ધિઓ</a><a href="#">ખેડૂતોના અભિપ્રાય</a><a href="#">સંપર્ક અને સમય</a>
+<span class="grp"></span>
+<a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>ફેરફારનો ઇતિહાસ</a>
+</nav>
+</aside>
+
+<div style="flex-grow:1;display:flex;flex-direction:column;min-width:0;position:relative">
+<header style="height:68px;background:#FFFFFF;border-bottom:1px solid #E3E3EA;display:flex;align-items:center;gap:12px;padding:0 40px;flex:none">
+<nav aria-label="બ્રેડક્રમ્બ" style="display:flex;align-items:center;gap:8px;margin-right:auto"><a href="AdminProductsDesktop.dc.html" style="color:#5B6070;text-underline-offset:4px">સનેડા</a><span class="hint">/</span><h1 style="font-size:22px">દવડા શક્તિ ૧૦</h1></nav>
+<span class="hint" style="margin-right:6px">ફેરફાર હજી સાચવ્યા નથી</span>
+<button class="btn bg">રદ કરો</button>
+<button class="btn bk">સાચવો</button>
+</header>
+
+<main style="padding:28px 40px 48px;display:grid;grid-template-columns:minmax(0,1fr) 410px;gap:28px;align-items:start">
+<div style="display:flex;flex-direction:column;gap:18px">
+
+<section class="card" aria-labelledby="s1">
+<h2 id="s1">ફોટા</h2>
+<div style="display:flex;gap:12px">
+<div style="position:relative;width:120px;height:120px;border-radius:12px;background:#F4F4F8;display:grid;place-items:center"><img src="../assets/KS-10.svg" alt="ફોટો ૧" style="width:100px"><span style="position:absolute;left:8px;top:8px;background:#19203F;color:#FFFFFF;font-size:12.5px;font-weight:600;padding:0 8px;border-radius:6px;line-height:1.7">મુખ્ય</span></div>
+<div style="position:relative;width:120px;height:120px;border-radius:12px;background:#ECEDF3;display:grid;place-items:center"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#8E92A3" stroke-width="1.4" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M4 17l5-4.5 3.5 3 3-2.5L20 17"/></svg></div>
+<div style="flex-grow:1;height:120px;border-radius:12px;border:1.5px dashed #8E92A3;display:flex;align-items:center;justify-content:center;gap:10px;background:#FFFFFF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#19203F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg><span>ફોટા અહીં ખેંચીને મૂકો, અથવા <a href="#" style="font-weight:600;text-underline-offset:4px">પસંદ કરો</a></span></div>
+</div>
+<p class="hint">વધુમાં વધુ ૬ ફોટા. પહેલો ફોટો કાર્ડ પર દેખાશે; ક્રમ બદલવા ખેંચો.</p>
+</section>
+
+<section class="card" aria-labelledby="s2">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:20px"><h2 id="s2">નામ અને વર્ણન</h2>
+<div class="seg" role="tablist" aria-label="ભાષા" style="width:380px">
+<button role="tab" aria-selected="false"><span class="ok"></span>ગુજરાતી</button>
+<button class="on" role="tab" aria-selected="true" style="font-family:Hind,sans-serif"><span class="miss"></span>हिंदी</button>
+<button role="tab" aria-selected="false" style="font-family:Hind,sans-serif"><span class="ok"></span>English</button>
+</div></div>
+<div class="hint" style="display:flex;gap:6px;align-items:center;color:#B85E08;background:#FCEBD6;border-radius:10px;padding:10px 12px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="flex:none"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.5"/></svg>હિન્દી લખાણ બાકી છે. ત્યાં સુધી સાઇટ પર ગુજરાતી લખાણ દેખાશે.</div>
+<div class="f"><label class="fl">નામ <span class="hint" style="font-weight:400">· हिंदी</span></label><div class="inp" style="font-family:Hind,sans-serif">दवडा शक्ति</div></div>
+<div class="f"><label class="fl">ટૂંકું વર્ણન <span class="hint" style="font-weight:400">· हिंदी</span></label><div class="inp" style="min-height:96px;align-items:flex-start;border-color:#19203F;box-shadow:0 0 0 3px rgba(224,123,22,.45)"></div><div style="display:flex;justify-content:space-between" class="hint"><span>ગુજરાતી: ખેડ અને માલવહન બંને માટે સૌથી વધુ પસંદ થતું મોડેલ.</span><span>૦ / ૧૨૦</span></div></div>
+</section>
+
+<section class="card" aria-labelledby="s4">
+<h2 id="s4">કિંમત, વિભાગ અને સ્થિતિ</h2>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px">
+<div class="f"><label class="fl">એક્સ-શોરૂમ કિંમત</label><div class="inp"><span style="color:#5B6070">₹</span><span>165000</span></div><span class="hint">સાઇટ પર: <b style="color:#1C1F26">₹૧,૬૫,૦૦૦</b></span></div>
+<div class="f"><span class="fl">વિભાગ</span><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="chip on" aria-pressed="true">ત્રણ પૈડાં</button><button class="chip" aria-pressed="false">ચાર પૈડાં</button><button class="chip" aria-pressed="false">ઓજારો અને ટ્રોલી</button></div></div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;border-top:1px solid #E3E3EA;padding-top:6px">
+<div class="trow"><div><div class="fl">કિંમત છુપાવો</div><div class="hint">“કિંમત માટે પૂછો”</div></div><button class="sw" role="switch" aria-checked="false" aria-label="કિંમત છુપાવો"><span></span></button></div>
+<div class="trow"><div><div class="fl">સ્ટૉકમાં છે</div><div class="hint">નહીં તો “ઑર્ડર પર તૈયાર”</div></div><button class="sw on" role="switch" aria-checked="true" aria-label="સ્ટૉકમાં છે"><span></span></button></div>
+<div class="trow"><div><div class="fl">સૌથી વધુ વેચાતો</div><div class="hint">કેસરી ટૅગ</div></div><button class="sw on" role="switch" aria-checked="true" aria-label="સૌથી વધુ વેચાતો"><span></span></button></div>
+</div>
+</section>
+
+<section class="card" aria-labelledby="s5">
+<h2 id="s5">વિગતો</h2>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px">
+<div class="f"><label class="fl">પાવર</label><div class="inp">10<span class="unit">HP</span></div></div>
+<div class="f"><label class="fl">ગિયર આગળ</label><div class="inp">5</div></div>
+<div class="f"><label class="fl">ગિયર રિવર્સ</label><div class="inp">1</div></div>
+<div class="f"><label class="fl">વહન ક્ષમતા</label><div class="inp">1.5<span class="unit">ટન</span></div></div>
+<div class="f"><label class="fl">ડીઝલ ટાંકી</label><div class="inp">20<span class="unit">લિટર</span></div></div>
+<div class="f"><label class="fl">વૉરંટી</label><div class="inp">1<span class="unit">વર્ષ</span></div></div>
+</div>
+<div class="f"><span class="fl">સ્ટાર્ટ</span><div style="display:flex;gap:8px"><button class="chip on" aria-pressed="true">સેલ્ફ સ્ટાર્ટ</button><button class="chip" aria-pressed="false">કિક સ્ટાર્ટ</button></div></div>
+</section>
+
+<section class="card" aria-labelledby="s6" style="flex-direction:row;justify-content:space-between;align-items:center">
+<div class="f"><h2 id="s6">મોડેલ ID: <span style="font-family:Hind,sans-serif">KS-10</span></h2><span class="hint">વૉટ્સઍપ મેસેજ અને લિંકમાં વપરાય છે.</span></div>
+<button class="btn" style="background:#FFFFFF;border:1.5px solid #E3E3EA;color:#B3261E">આ સનેડો કાઢી નાખો</button>
+</section>
+</div>
+
+<aside aria-label="પ્રિવ્યૂ" style="display:flex;flex-direction:column;gap:10px">
+<span class="hint" style="font-weight:600">સાઇટ પર આવું દેખાશે</span>
+<article style="display:flex;flex-direction:column;border:1px solid #E3E3EA;border-radius:18px;overflow:hidden;background:#FFFFFF">
+<div style="position:relative;padding:18px 18px 8px;background:#F4F4F8">
+<span style="position:absolute;top:12px;left:12px;background:#E07B16;color:#1B1206;font-size:14px;font-weight:600;padding:2px 10px;border-radius:8px">सबसे ज़्यादा बिकने वाला</span>
+<span style="position:absolute;top:12px;right:12px;background:#FFFFFF;color:#5B6070;font-size:14px;padding:2px 10px;border-radius:8px;display:inline-flex;align-items:center;gap:7px;font-family:Hind,sans-serif"><span style="width:8px;height:8px;border-radius:50%;background:#19203F"></span>स्टॉक में</span>
+<img src="../assets/KS-10.svg" alt="" style="width:100%;aspect-ratio:16/10;display:block">
+</div>
+<div style="padding:18px 18px 20px;display:flex;flex-direction:column;gap:12px;font-family:Hind,sans-serif">
+<h3 style="font-size:23px;font-family:'Anek Devanagari','Anek Gujarati',sans-serif">दवडा शक्ति 10</h3>
+<p style="font-size:16px;color:#5B6070;font-family:'Hind Vadodara',sans-serif">ખેડ અને માલવહન બંને માટે સૌથી વધુ પસંદ થતું મોડેલ.</p>
+<dl style="display:flex;gap:24px"><div><dt style="font-size:14px;color:#5B6070">पावर</dt><dd style="font-weight:600">10 HP</dd></div><div><dt style="font-size:14px;color:#5B6070">गियर</dt><dd style="font-weight:600">5 आगे, 1 रिवर्स</dd></div></dl>
+<div style="padding-top:12px;border-top:1px dashed #E3E3EA"><div style="font-size:14px;color:#5B6070">एक्स-शोरूम कीमत</div><div class="d" style="font-size:26px;font-weight:800;line-height:1.3">₹1,65,000</div></div>
+<span class="btn bw" style="width:100%">व्हाट्सऐप पर पूछताछ</span>
+</div>
+</article>
+<p class="hint">પ્રિવ્યૂ પસંદ કરેલી ભાષામાં બદલાય છે. ખાલી વર્ણનની જગ્યાએ ગુજરાતી લખાણ દેખાય છે.</p>
+</aside>
+</main>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1620}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

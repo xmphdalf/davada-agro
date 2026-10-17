@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<title>ઍડમિન — ફોટાની વિગત (મોબાઇલ)</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Gujarati:wdth,wght@75..125,500..800&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;family=Hind:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0;background:#F4F4F8;color:#1C1F26;font-family:"Hind Vadodara","Noto Sans Gujarati",system-ui,sans-serif;font-size:16px;line-height:1.6}
+*{box-sizing:border-box}
+h1,h2,h3{margin:0;font-family:"Anek Gujarati","Hind Vadodara",sans-serif;font-stretch:92%;font-weight:700;line-height:1.25}
+p{margin:0}
+a{color:inherit}
+button{font:inherit;color:inherit}
+.hint{font-size:14px;color:#5B6070;line-height:1.5}
+.f{display:flex;flex-direction:column;gap:6px}
+.fl{font-size:15px;font-weight:600}
+.inp{min-height:48px;border:1.5px solid #8E92A3;border-radius:10px;padding:10px 14px;background:#FFFFFF;width:100%;display:flex;align-items:center;gap:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 18px;border-radius:12px;font-weight:600;font-size:16px;text-decoration:none;border:0;cursor:pointer;white-space:nowrap}
+.bk{background:#E07B16;color:#1B1206}
+.bg{background:#FFFFFF;border:1.5px solid #E3E3EA;color:#1C1F26}
+.chip{flex:none;height:44px;padding:0 14px;border-radius:999px;border:1.5px solid #E3E3EA;background:#FFFFFF;font-weight:500;white-space:nowrap;cursor:pointer}
+.chip.on{background:#19203F;border-color:#19203F;color:#FFFFFF}
+.seg{display:flex;background:#F4F4F8;border-radius:10px;padding:4px;gap:4px}
+.seg button{flex:1;height:38px;border:0;border-radius:8px;background:transparent;font-weight:500;display:flex;align-items:center;justify-content:center;gap:6px;cursor:pointer;font-size:15px}
+.seg button.on{background:#FFFFFF;box-shadow:0 0 0 1px #E3E3EA;font-weight:600}
+.ok{width:7px;height:7px;border-radius:50%;background:#19203F}
+.miss{width:7px;height:7px;border-radius:50%;border:1.5px solid #B85E08}
+</style>
+</helmet>
+<div style="width:360px;height:1060px;background:#F4F4F8;display:flex;flex-direction:column;position:relative;overflow:hidden">
+
+<header style="height:56px;background:#FFFFFF;border-bottom:1px solid #E3E3EA;display:flex;align-items:center;gap:4px;padding:0 8px;flex:none">
+<a href="AdminGalleryMobile.dc.html" aria-label="પાછા: ગેલેરી" style="width:44px;height:44px;display:grid;place-items:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1C1F26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></a>
+<h1 style="font-size:19px;margin-right:auto">ફોટાની વિગત</h1>
+<span class="hint" style="padding-right:10px">૬ / ૨૪</span>
+</header>
+
+<div style="height:270px;background:#FFFFFF;display:grid;place-items:center;border-bottom:1px solid #E3E3EA;flex:none;position:relative">
+<img src="../assets/KS-10.svg" alt="દવડા શક્તિ ૧૦" style="width:290px">
+<span style="position:absolute;left:12px;top:10px;font-size:11px;color:#5B6070;font-family:Hind,sans-serif;letter-spacing:.04em">PHOTO PLACEHOLDER</span>
+</div>
+
+<main style="padding:20px 16px 110px;display:flex;flex-direction:column;gap:22px">
+<div class="f"><span class="fl">વિભાગ</span>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><button class="chip on" aria-pressed="true">સનેડા</button><button class="chip" aria-pressed="false">ટ્રોલી અને ઓજારો</button><button class="chip" aria-pressed="false">ડિલિવરી</button><button class="chip" aria-pressed="false">વર્કશૉપ</button><button class="chip" aria-pressed="false">સન્માન</button></div>
+</div>
+
+<div class="f"><span class="fl">કૅપ્શન</span>
+<div class="seg" role="tablist" aria-label="ભાષા">
+<button role="tab" aria-selected="false"><span class="ok"></span>ગુજરાતી</button>
+<button role="tab" aria-selected="false" style="font-family:Hind,sans-serif"><span class="ok"></span>हिंदी</button>
+<button class="on" role="tab" aria-selected="true" style="font-family:Hind,sans-serif"><span class="miss"></span>English</button>
+</div>
+<div class="inp" style="border-color:#19203F;box-shadow:0 0 0 3px rgba(224,123,22,.45);font-family:Hind,sans-serif">Davada Shakti 10<span style="width:1.5px;height:20px;background:#19203F"></span></div>
+<span class="hint">ગુજરાતી: દવડા શક્તિ ૧૦ · ટૂંકું રાખો. ડિલિવરીના ફોટામાં ગામનું નામ લખો, જેમ કે “લાઠીમાં ડિલિવરી”.</span>
+</div>
+
+<div class="f"><label class="fl">ફોટામાં કયું મોડેલ છે? <span class="hint" style="font-weight:400">(જરૂરી નથી)</span></label>
+<div class="inp" style="justify-content:space-between"><span>દવડા શક્તિ ૧૦ <span style="color:#5B6070;font-family:Hind,sans-serif">· KS-10</span></span><svg width="14" height="14" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5l3 3 3-3" stroke="#1C1F26" stroke-width="1.5" fill="none"/></svg></div>
+<span class="hint">પસંદ કરશો તો ગેલેરીમાં “આ મોડેલ વિશે પૂછો” બટન દેખાશે.</span>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:4px;border-top:1px solid #E3E3EA;padding-top:14px">
+<button class="btn" style="background:transparent;justify-content:flex-start;padding:0 4px;gap:10px;color:#1C1F26"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>ફોટાની લિંક કૉપી કરો</button>
+<button class="btn" style="background:transparent;justify-content:flex-start;padding:0 4px;gap:10px;color:#B3261E"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg>આ ફોટો કાઢી નાખો</button>
+</div>
+</main>
+
+<div style="position:absolute;left:0;right:0;bottom:0;background:#FFFFFF;border-top:1px solid #E3E3EA;padding:10px 12px 14px;display:flex;align-items:center;gap:10px">
+<span style="flex-grow:1;font-weight:500;font-size:15px">ફેરફાર હજી સાચવ્યા નથી</span>
+<button class="btn bg">રદ કરો</button>
+<button class="btn bk">સાચવો</button>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":360,"height":1060}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Foundations — Davada Agro design language</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Gujarati:wdth,wght@75..125,500..800&amp;family=Anek+Devanagari:wdth,wght@75..125,500..800&amp;family=Anek+Latin:wdth,wght@75..125,500..800&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;family=Hind:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#FFFFFF;color:#1C1F26;font-family:"Hind","Hind Vadodara",system-ui,sans-serif;font-size:16px;line-height:1.6}
+*{box-sizing:border-box}
+h1,h2,h3,h4{margin:0;font-family:"Anek Latin","Anek Gujarati",sans-serif;font-stretch:92%;font-weight:700;line-height:1.2}
+p{margin:0}
+.gu{font-family:"Hind Vadodara","Noto Sans Gujarati",sans-serif;line-height:1.7}
+.dgu{font-family:"Anek Gujarati","Hind Vadodara",sans-serif;font-stretch:92%}
+.dhi{font-family:"Anek Devanagari","Hind",sans-serif;font-stretch:92%}
+.hi{font-family:"Hind","Noto Sans Devanagari",sans-serif;line-height:1.7}
+.den{font-family:"Anek Latin","Hind",sans-serif;font-stretch:92%}
+.lbl{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#5B6070;font-weight:600}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;color:#5B6070}
+.sec{display:grid;grid-template-columns:260px minmax(0,1fr);gap:48px;padding:72px 96px;border-top:1px solid #E3E3EA}
+.sec h2{font-size:30px}
+.sec .intro{color:#5B6070;margin-top:10px;font-size:15px}
+.sw{height:104px;border-radius:14px}
+.swl{border:1px solid #E3E3EA}
+.nm{font-weight:600;font-size:15px;margin-top:10px}
+.rl{font-size:13px;color:#5B6070;line-height:1.5}
+</style>
+</helmet>
+<div style="width:1440px;height:4960px;background:#FFFFFF;display:flex;flex-direction:column">
+
+<!-- Cover -->
+<div style="background:#19203F;color:#FFFFFF;padding:88px 96px 80px;display:flex;flex-direction:column;gap:56px">
+<div style="display:flex;align-items:center;gap:14px">
+<svg viewBox="0 0 40 40" width="48" height="48" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#10142C"/><path d="M13 32c0-7 3-13 6-17h2c3 4 6 10 6 17z" fill="#E07B16"/><ellipse cx="20" cy="14.5" rx="3" ry="1.2" fill="#E07B16"/><path d="M20 13V6l6 1.6L20 9" fill="#F4A94E" stroke="#F4A94E" stroke-width=".6"/></svg>
+<div style="display:flex;flex-direction:column">
+<span class="dgu" style="font-weight:800;font-size:22px;line-height:1.2">દવડા ઍગ્રો ઇન્ડસ્ટ્રીઝ</span>
+<span class="gu" style="font-size:14px;color:#C9CBDD;line-height:1.4">ચિતલ, અમરેલી</span>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:64px;align-items:end">
+<div style="display:flex;flex-direction:column;gap:18px">
+<span class="lbl" style="color:#F4A94E">Design language · v1.0 · September 2026</span>
+<h1 style="font-size:84px;font-weight:800;line-height:1.02;letter-spacing:-.01em">Built for the farmer’s phone.</h1>
+</div>
+<p style="color:#C9CBDD;font-size:18px;max-width:46ch">The system behind davadaagro.in: tokens, type and components drawn from the approved prototype. Gujarati-first, calm, and designed at 360 px before anything else.</p>
+</div>
+</div>
+
+<!-- Principles -->
+<div style="padding:72px 96px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<span class="den" style="font-size:15px;font-weight:700;color:#B85E08">01</span>
+<h3 style="font-size:22px">Gujarati first</h3>
+<p style="color:#5B6070;font-size:15px">Gujarati is the default locale. Hindi and English sit one tap away in the header picker — never an equal three-column layout. Copy is written, not translated.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<span class="den" style="font-size:15px;font-weight:700;color:#B85E08">02</span>
+<h3 style="font-size:22px">Green means WhatsApp</h3>
+<p style="color:#5B6070;font-size:15px">#1DA851 is reserved for inquiry buttons. Nothing else on the site is green, so a visitor learns the rule once and can act without reading.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<span class="den" style="font-size:15px;font-weight:700;color:#B85E08">03</span>
+<h3 style="font-size:22px">One action per area</h3>
+<p style="color:#5B6070;font-size:15px">Every section has a single primary button. Everything else is a ghost button or an underlined link. White space does the separating.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<span class="den" style="font-size:15px;font-weight:700;color:#B85E08">04</span>
+<h3 style="font-size:22px">The sanedo is the hero</h3>
+<p style="color:#5B6070;font-size:15px">Flat surfaces, thin lines, no shadows on cards. Product imagery sits on the cool wash so it is always the most colourful thing on screen.</p>
+</div>
+</div>
+
+<!-- Colour -->
+<div class="sec">
+<div>
+<span class="lbl">03 · Colour</span>
+<h2 style="margin-top:8px">Indigo, kesar, white</h2>
+<p class="intro">Locked palette from the prototype. Indigo carries the brand, kesar marks the primary action, the cool wash separates sections. Ratios on the right are WCAG contrast against the pair shown.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:40px">
+<div>
+<span class="lbl">Brand</span>
+<div style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px;margin-top:14px">
+<div><div class="sw" style="background:#19203F"></div><div class="nm">Indigo 800</div><div class="mono">#19203F</div><div class="rl">Header CTA, active chip, dialog heads</div></div>
+<div><div class="sw" style="background:#10142C"></div><div class="nm">Indigo 900</div><div class="mono">#10142C</div><div class="rl">Stats band, lightbox, hero base</div></div>
+<div><div class="sw" style="background:#E07B16"></div><div class="nm">Kesar 500</div><div class="mono">#E07B16</div><div class="rl">Primary button fill, focus ring, tags</div></div>
+<div><div class="sw" style="background:#B85E08"></div><div class="nm">Kesar 700</div><div class="mono">#B85E08</div><div class="rl">Kesar as text on light (4.5:1)</div></div>
+<div><div class="sw swl" style="background:#FCEBD6"></div><div class="nm">Kesar 100</div><div class="mono">#FCEBD6</div><div class="rl">Subsidy panel ground</div></div>
+<div><div class="sw" style="background:#1DA851"></div><div class="nm">WhatsApp</div><div class="mono">#1DA851 · hover #12873F</div><div class="rl">Inquiry buttons only</div></div>
+</div>
+</div>
+<div>
+<span class="lbl">Neutrals &amp; on-indigo</span>
+<div style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px;margin-top:14px">
+<div><div class="sw" style="background:#1C1F26"></div><div class="nm">Ink</div><div class="mono">#1C1F26</div><div class="rl">Headings, body</div></div>
+<div><div class="sw" style="background:#5B6070"></div><div class="nm">Muted</div><div class="mono">#5B6070</div><div class="rl">Secondary text · 6.3:1 on paper</div></div>
+<div><div class="sw swl" style="background:#E3E3EA"></div><div class="nm">Line</div><div class="mono">#E3E3EA</div><div class="rl">Borders, dividers</div></div>
+<div><div class="sw swl" style="background:#F4F4F8"></div><div class="nm">Wash</div><div class="mono">#F4F4F8</div><div class="rl">Product image ground, awards band</div></div>
+<div><div class="sw" style="background:#F4A94E"></div><div class="nm">Kesar 300</div><div class="mono">#F4A94E</div><div class="rl">Stat numbers on indigo · 9.2:1</div></div>
+<div><div class="sw" style="background:#F7C98A"></div><div class="nm">Sand</div><div class="mono">#F7C98A</div><div class="rl">Blessing line on hero · 11:1</div></div>
+</div>
+</div>
+<div>
+<span class="lbl">Dark mode — surfaces swap, brand colours stay</span>
+<div style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px;margin-top:14px">
+<div><div class="sw" style="background:#12141C"></div><div class="nm">Paper</div><div class="mono">#12141C</div></div>
+<div><div class="sw" style="background:#1B1E29"></div><div class="nm">Wash</div><div class="mono">#1B1E29</div></div>
+<div><div class="sw" style="background:#2B2F3D"></div><div class="nm">Line</div><div class="mono">#2B2F3D</div></div>
+<div><div class="sw swl" style="background:#ECEDF2"></div><div class="nm">Ink</div><div class="mono">#ECEDF2</div></div>
+<div><div class="sw" style="background:#A6AABA"></div><div class="nm">Muted</div><div class="mono">#A6AABA · 8:1</div></div>
+<div><div class="sw" style="background:#35261A"></div><div class="nm">Kesar 100</div><div class="mono">#35261A</div></div>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px">
+<div>
+<span class="lbl">Proportion on a typical screen</span>
+<div style="display:flex;height:48px;border-radius:12px;overflow:hidden;margin-top:14px;border:1px solid #E3E3EA">
+<div style="flex-grow:58;background:#FFFFFF"></div>
+<div style="flex-grow:22;background:#19203F"></div>
+<div style="flex-grow:10;background:#F4F4F8"></div>
+<div style="flex-grow:6;background:#E07B16"></div>
+<div style="flex-grow:4;background:#1DA851"></div>
+</div>
+<div style="display:flex;justify-content:space-between;margin-top:8px" class="mono"><span>Paper 58</span><span>Indigo 22</span><span>Wash 10</span><span>Kesar 6</span><span>WA 4</span></div>
+</div>
+<div>
+<span class="lbl">Contrast rules</span>
+<div style="display:flex;flex-direction:column;gap:8px;margin-top:14px;font-size:14px">
+<div style="display:flex;justify-content:space-between;border-bottom:1px solid #E3E3EA;padding-bottom:8px"><span>Ink #1B1206 on Kesar 500</span><span class="mono">6.2:1 · all sizes</span></div>
+<div style="display:flex;justify-content:space-between;border-bottom:1px solid #E3E3EA;padding-bottom:8px"><span>White on Indigo 800</span><span class="mono">15.9:1 · all sizes</span></div>
+<div style="display:flex;justify-content:space-between;border-bottom:1px solid #E3E3EA;padding-bottom:8px"><span>White on WhatsApp #1DA851</span><span class="mono">3.1:1 · label 19 px bold only</span></div>
+<div style="display:flex;justify-content:space-between"><span>Kesar 500 as text on white</span><span class="mono">3.0:1 · never — use Kesar 700</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Typography -->
+<div class="sec">
+<div>
+<span class="lbl">04 · Typography</span>
+<h2 style="margin-top:8px">One family, three scripts</h2>
+<p class="intro">Anek for headings in every language, so the brand looks the same whichever locale is on. Hind Vadodara and Hind for reading. Line height 1.7 for Gujarati and Hindi keeps matras (ુ ૂ ૃ) clear of the line below.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:44px">
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px">
+<div style="background:#F4F4F8;border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:12px">
+<span class="lbl">ગુજરાતી · default</span>
+<div class="dgu" style="font-size:64px;font-weight:800;line-height:1.1">કખગ ૧૨૩</div>
+<div class="mono">Anek Gujarati 500–800 / Hind Vadodara 400–600</div>
+</div>
+<div style="border:1px solid #E3E3EA;border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:12px">
+<span class="lbl">हिंदी</span>
+<div class="dhi" style="font-size:64px;font-weight:800;line-height:1.1">कखग 123</div>
+<div class="mono">Anek Devanagari / Hind</div>
+</div>
+<div style="border:1px solid #E3E3EA;border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:12px">
+<span class="lbl">English</span>
+<div class="den" style="font-size:64px;font-weight:800;line-height:1.1">Abc 123</div>
+<div class="mono">Anek Latin / Hind · line height 1.6</div>
+</div>
+</div>
+
+<div>
+<span class="lbl">Scale — mobile / desktop</span>
+<div style="display:flex;flex-direction:column;margin-top:10px">
+<div style="display:grid;grid-template-columns:150px 170px minmax(0,1fr);gap:24px;align-items:baseline;padding:20px 0;border-bottom:1px solid #E3E3EA">
+<div><div style="font-weight:600">Display</div><div class="mono">hero h1</div></div><div class="mono">34 / 59 · 800 · 1.2</div>
+<div class="dgu" style="font-size:52px;font-weight:800;line-height:1.2">ખેતરથી બજાર સુધી, ભરોસાનો સાથી</div>
+</div>
+<div style="display:grid;grid-template-columns:150px 170px minmax(0,1fr);gap:24px;align-items:baseline;padding:20px 0;border-bottom:1px solid #E3E3EA">
+<div><div style="font-weight:600">Heading 2</div><div class="mono">section title</div></div><div class="mono">27 / 38 · 700 · 1.25</div>
+<div class="dgu" style="font-size:38px;font-weight:700;line-height:1.25">અમારા સનેડા</div>
+</div>
+<div style="display:grid;grid-template-columns:150px 170px minmax(0,1fr);gap:24px;align-items:baseline;padding:20px 0;border-bottom:1px solid #E3E3EA">
+<div><div style="font-weight:600">Heading 3</div><div class="mono">card title</div></div><div class="mono">23 · 700 · 1.25</div>
+<div class="dgu" style="font-size:23px;font-weight:700;line-height:1.25">દવડા શક્તિ ૧૦</div>
+</div>
+<div style="display:grid;grid-template-columns:150px 170px minmax(0,1fr);gap:24px;align-items:baseline;padding:20px 0;border-bottom:1px solid #E3E3EA">
+<div><div style="font-weight:600">Price</div><div class="mono">figure</div></div><div class="mono">26 · 800</div>
+<div class="dgu" style="font-size:26px;font-weight:800">₹૧,૬૫,૦૦૦</div>
+</div>
+<div style="display:grid;grid-template-columns:150px 170px minmax(0,1fr);gap:24px;align-items:baseline;padding:20px 0;border-bottom:1px solid #E3E3EA">
+<div><div style="font-weight:600">Lead</div><div class="mono">hero subline</div></div><div class="mono">18 · 400 · 1.7</div>
+<p class="gu" style="font-size:18px">ચિતલથી સૌરાષ્ટ્રના ખેડૂતો માટે મજબૂત, ટકાઉ અને ઓછા ખર્ચે ચાલતા સનેડા.</p>
+</div>
+<div style="display:grid;grid-template-columns:150px 170px minmax(0,1fr);gap:24px;align-items:baseline;padding:20px 0;border-bottom:1px solid #E3E3EA">
+<div><div style="font-weight:600">Body</div><div class="mono">default</div></div><div class="mono">17 · 400 · 1.7</div>
+<p class="gu" style="font-size:17px">દરેક સનેડો અમારા પોતાના વર્કશૉપમાં તૈયાર અને ચકાસાયેલો છે.</p>
+</div>
+<div style="display:grid;grid-template-columns:150px 170px minmax(0,1fr);gap:24px;align-items:baseline;padding:20px 0;border-bottom:1px solid #E3E3EA">
+<div><div style="font-weight:600">Label</div><div class="mono">buttons</div></div><div class="mono">17 · 600  ·  WA 19 · 700</div>
+<div style="display:flex;gap:28px;align-items:baseline"><span class="gu" style="font-size:17px;font-weight:600">સનેડા જુઓ</span><span class="gu" style="font-size:19px;font-weight:700;color:#12873F">વૉટ્સઍપ પર પૂછપરછ</span></div>
+</div>
+<div style="display:grid;grid-template-columns:150px 170px minmax(0,1fr);gap:24px;align-items:baseline;padding:20px 0">
+<div><div style="font-weight:600">Small</div><div class="mono">meta, spec label</div></div><div class="mono">14 · 500 · 1.6</div>
+<p class="gu" style="font-size:14px;color:#5B6070">એક્સ-શોરૂમ કિંમત · વહન ક્ષમતા · સ્ટૉકમાં</p>
+</div>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px">
+<div style="background:#F4F4F8;border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:14px">
+<span class="lbl">Numerals follow the locale</span>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px">
+<div><div class="dgu" style="font-size:30px;font-weight:800">૧૨+</div><div class="mono">stats</div></div>
+<div><div class="dgu" style="font-size:30px;font-weight:800">₹૧,૬૫,૦૦૦</div><div class="mono">prices</div></div>
+<div><div class="dgu" style="font-size:30px;font-weight:800">૧૦ HP</div><div class="mono">specs</div></div>
+</div>
+<p style="font-size:14px;color:#5B6070">Gujarati locale uses ૦–૯ in prose, prices, stats, specs and the lightbox counter. Hindi and English use 0–9. Indian grouping (1,65,000) everywhere.</p>
+</div>
+<div style="border:1px solid #E3E3EA;border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:14px">
+<span class="lbl">Exception: phone numbers</span>
+<div class="den" style="font-size:30px;font-weight:800">+91 98765 43210</div>
+<p style="font-size:14px;color:#5B6070">Phone and WhatsApp numbers stay in Latin digits in every locale so they can be read aloud, copied and dialled without confusion. Model IDs (KS-10) stay Latin too.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Spacing & grid -->
+<div class="sec">
+<div>
+<span class="lbl">05 · Space &amp; grid</span>
+<h2 style="margin-top:8px">Designed at 360 first</h2>
+<p class="intro">A 4 px base. Sections breathe at 64 px vertically on every breakpoint; the page gutter is 20 px on phones and the container caps at 1160 px.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;align-items:flex-end;gap:22px">
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:4px;height:4px;background:#E07B16"></div><span class="mono">4</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:8px;height:8px;background:#E07B16"></div><span class="mono">8</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:12px;height:12px;background:#E07B16"></div><span class="mono">12</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:16px;height:16px;background:#E07B16"></div><span class="mono">16</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:20px;height:20px;background:#E07B16"></div><span class="mono">20</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:24px;height:24px;background:#E07B16"></div><span class="mono">24</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:32px;height:32px;background:#E07B16"></div><span class="mono">32</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:48px;height:48px;background:#E07B16"></div><span class="mono">48</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:64px;height:64px;background:#E07B16"></div><span class="mono">64</span></div>
+</div>
+<div style="display:grid;grid-template-columns:120px 250px minmax(0,1fr);gap:32px;align-items:end">
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="height:180px;border:1.5px solid #19203F;border-radius:14px;padding:10px 8px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px">
+<div style="background:#F4F4F8;border-radius:4px"></div><div style="background:#F4F4F8;border-radius:4px"></div><div style="background:#F4F4F8;border-radius:4px"></div><div style="background:#F4F4F8;border-radius:4px"></div><div style="background:#F4F4F8;border-radius:4px"></div><div style="background:#F4F4F8;border-radius:4px"></div>
+</div>
+<div class="nm" style="margin:0">Mobile 360</div><div class="rl">20 px gutter · products 1 col · gallery 2 col · gap 12</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="height:180px;border:1.5px solid #19203F;border-radius:14px;padding:12px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px">
+<div style="background:#F4F4F8;border-radius:4px"></div><div style="background:#F4F4F8;border-radius:4px"></div><div style="background:#F4F4F8;border-radius:4px"></div><div style="background:#F4F4F8;border-radius:4px"></div><div style="background:#F4F4F8;border-radius:4px"></div><div style="background:#F4F4F8;border-radius:4px"></div>
+</div>
+<div class="nm" style="margin:0">Tablet 640–999</div><div class="rl">32 px gutter · products 2 col · gallery 3 col</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="height:180px;border:1.5px solid #19203F;border-radius:14px;padding:14px 60px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px">
+<div style="background:#F4F4F8;border-radius:4px"></div><div style="background:#F4F4F8;border-radius:4px"></div><div style="background:#F4F4F8;border-radius:4px"></div><div style="background:#F4F4F8;border-radius:4px"></div><div style="background:#F4F4F8;border-radius:4px"></div><div style="background:#F4F4F8;border-radius:4px"></div><div style="background:#F4F4F8;border-radius:4px"></div><div style="background:#F4F4F8;border-radius:4px"></div>
+</div>
+<div class="nm" style="margin:0">Desktop ≥1000</div><div class="rl">1160 px container · products 3 col · gallery 4 col · gap 18 · nav visible from 900</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Shape, line, icons -->
+<div class="sec">
+<div>
+<span class="lbl">06 · Shape &amp; iconography</span>
+<h2 style="margin-top:8px">Soft, flat, outlined</h2>
+<p class="intro">Radii grow with the size of the surface. Separation comes from 1 px lines and the wash — no drop shadows. The only overlay is the dialog backdrop.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:40px">
+<div style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:18px">
+<div><div style="height:88px;border:1.5px solid #19203F;border-radius:8px"></div><div class="nm">8</div><div class="rl">Tags, badges</div></div>
+<div><div style="height:88px;border:1.5px solid #19203F;border-radius:12px"></div><div class="nm">12</div><div class="rl">Gallery tile, dock</div></div>
+<div><div style="height:88px;border:1.5px solid #19203F;border-radius:14px"></div><div class="nm">14</div><div class="rl">Buttons, spec grid</div></div>
+<div><div style="height:88px;border:1.5px solid #19203F;border-radius:18px"></div><div class="nm">18</div><div class="rl">Cards</div></div>
+<div><div style="height:88px;border:1.5px solid #19203F;border-radius:22px"></div><div class="nm">22</div><div class="rl">Sheet, dialog</div></div>
+<div><div style="height:88px;border:1.5px solid #19203F;border-radius:24px"></div><div class="nm">24</div><div class="rl">Subsidy panel</div></div>
+<div><div style="height:88px;border:1.5px solid #19203F;border-radius:999px"></div><div class="nm">Pill</div><div class="rl">Chips, header controls</div></div>
+</div>
+<div>
+<span class="lbl">Icons · 24 grid · 1.8 stroke · round caps</span>
+<div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px;margin-top:14px;color:#19203F">
+<div style="height:72px;background:#F4F4F8;border-radius:12px;display:grid;place-items:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></div>
+<div style="height:72px;background:#F4F4F8;border-radius:12px;display:grid;place-items:center;color:#12873F"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2-.2-.2-.5-.3z"/></svg></div>
+<div style="height:72px;background:#F4F4F8;border-radius:12px;display:grid;place-items:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg></div>
+<div style="height:72px;background:#F4F4F8;border-radius:12px;display:grid;place-items:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></div>
+<div style="height:72px;background:#F4F4F8;border-radius:12px;display:grid;place-items:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></div>
+<div style="height:72px;background:#F4F4F8;border-radius:12px;display:grid;place-items:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></div>
+<div style="height:72px;background:#F4F4F8;border-radius:12px;display:grid;place-items:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg></div>
+<div style="height:72px;background:#F4F4F8;border-radius:12px;display:grid;place-items:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></div>
+<div style="height:72px;background:#F4F4F8;border-radius:12px;display:grid;place-items:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M4 17l5-4.5 3.5 3 3-2.5L20 17"/></svg></div>
+<div style="height:72px;background:#F4F4F8;border-radius:12px;display:grid;place-items:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h10v4a5 5 0 0 1-10 0zM7 6H4a3 3 0 0 0 3 4M17 6h3a3 3 0 0 1-3 4M12 13v4M8 21h8M9 17h6v4H9z"/></svg></div>
+<div style="height:72px;background:#F4F4F8;border-radius:12px;display:grid;place-items:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="15" r="5"/><path d="M8.5 11 6 3h4l2 5 2-5h4l-2.5 8M12 13v4"/></svg></div>
+<div style="height:72px;background:#F4F4F8;border-radius:12px;display:grid;place-items:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px;margin-top:8px" class="mono">
+<span>call</span><span>whatsapp</span><span>language</span><span>close</span><span>prev</span><span>next</span><span>share</span><span>play</span><span>photo</span><span>trophy</span><span>medal</span><span>map</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Motion & access -->
+<div class="sec">
+<div>
+<span class="lbl">07 · Motion &amp; access</span>
+<h2 style="margin-top:8px">Quiet and reachable</h2>
+<p class="intro">Movement only explains where something came from. Everything works with a thumb, a keyboard and a screen reader.</p>
+</div>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px">
+<div style="border:1px solid #E3E3EA;border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:14px">
+<div style="height:64px;display:flex;align-items:center;justify-content:center"><div style="width:88px;height:52px;border-radius:14px;background:#E07B16;outline:3px solid #E07B16;outline-offset:3px"></div></div>
+<h3 style="font-size:18px">Focus ring</h3><p class="rl">3 px Kesar 500, 3 px offset. Visible on keyboard focus only.</p>
+</div>
+<div style="border:1px solid #E3E3EA;border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:14px">
+<div style="height:64px;display:flex;align-items:center;justify-content:center;gap:8px"><div style="width:44px;height:44px;border:1.5px dashed #B85E08;border-radius:10px;display:grid;place-items:center" class="mono">44</div><div style="width:52px;height:52px;border:1.5px dashed #B85E08;border-radius:12px;display:grid;place-items:center" class="mono">52</div></div>
+<h3 style="font-size:18px">Tap targets</h3><p class="rl">44 px minimum for chips, icons and links; 52 px for primary buttons; 48 px in the dock.</p>
+</div>
+<div style="border:1px solid #E3E3EA;border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:14px">
+<div style="height:64px;display:flex;align-items:center" class="mono">250 ms · ease-out · 24 px rise</div>
+<h3 style="font-size:18px">Sheet &amp; lightbox</h3><p class="rl">Sheets rise from below, lightbox cross-fades. With reduced motion both simply appear.</p>
+</div>
+<div style="border:1px solid #E3E3EA;border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:14px">
+<div style="height:64px;display:flex;align-items:center" class="mono">env(safe-area-inset-*)</div>
+<h3 style="font-size:18px">Safe areas</h3><p class="rl">Header, dock and lightbox controls respect notches and home indicators. Alt text follows the active language.</p>
+</div>
+</div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":4960}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

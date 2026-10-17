@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<title>ઍડમિન — હોમ પેજ લખાણ (મોબાઇલ)</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Gujarati:wdth,wght@75..125,500..800&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;family=Hind:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0;background:#F4F4F8;color:#1C1F26;font-family:"Hind Vadodara","Noto Sans Gujarati",system-ui,sans-serif;font-size:16px;line-height:1.6}
+*{box-sizing:border-box}
+h1,h2,h3{margin:0;font-family:"Anek Gujarati","Hind Vadodara",sans-serif;font-stretch:92%;font-weight:700;line-height:1.25}
+p{margin:0}
+a{color:inherit}
+button{font:inherit;color:inherit}
+.hint{font-size:14px;color:#5B6070;line-height:1.5}
+.card{background:#FFFFFF;border:1px solid #E3E3EA;border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:16px}
+.card h2{font-size:17px}
+.f{display:flex;flex-direction:column;gap:6px}
+.fl{font-size:15px;font-weight:600}
+.inp{min-height:48px;border:1.5px solid #8E92A3;border-radius:10px;padding:10px 14px;background:#FFFFFF;width:100%;display:flex;align-items:center;gap:8px}
+.seg{display:flex;background:#FFFFFF;border:1px solid #E3E3EA;border-radius:10px;padding:4px;gap:4px}
+.seg button{flex:1;height:38px;border:0;border-radius:8px;background:transparent;font-weight:500;display:flex;align-items:center;justify-content:center;gap:6px;cursor:pointer;font-size:15px}
+.seg button.on{background:#19203F;color:#FFFFFF;font-weight:600}
+.ok{width:7px;height:7px;border-radius:50%;background:currentColor}
+.cnt{display:flex;justify-content:space-between}
+</style>
+</helmet>
+<div style="width:360px;height:1400px;background:#F4F4F8;display:flex;flex-direction:column;position:relative;overflow:hidden">
+
+<header style="height:56px;background:#FFFFFF;border-bottom:1px solid #E3E3EA;display:flex;align-items:center;gap:4px;padding:0 8px;flex:none">
+<a href="AdminHomeMobile.dc.html" aria-label="પાછા" style="width:44px;height:44px;display:grid;place-items:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1C1F26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></a>
+<h1 style="font-size:19px;margin-right:auto">હોમ પેજ લખાણ</h1>
+<a href="HomeMobile.dc.html" style="height:44px;padding:0 10px;display:inline-flex;align-items:center;font-weight:600;color:#19203F;text-underline-offset:4px">પ્રિવ્યૂ</a>
+</header>
+
+<div style="padding:12px 16px;background:#F4F4F8;flex:none">
+<div class="seg" role="tablist" aria-label="ભાષા">
+<button class="on" role="tab" aria-selected="true"><span class="ok"></span>ગુજરાતી</button>
+<button role="tab" aria-selected="false" style="font-family:Hind,sans-serif"><span class="ok" style="color:#19203F"></span>हिंदी</button>
+<button role="tab" aria-selected="false" style="font-family:Hind,sans-serif"><span class="ok" style="color:#19203F"></span>English</button>
+</div>
+<p class="hint" style="margin-top:8px">ભાષા બદલવાથી નીચેનાં બધાં ખાનાં એ ભાષામાં બદલાશે.</p>
+</div>
+
+<main style="padding:4px 16px 120px;display:flex;flex-direction:column;gap:14px">
+<section class="card" aria-labelledby="h1s">
+<h2 id="h1s">પહેલો ભાગ (હીરો)</h2>
+<div class="f"><label class="fl">આશીર્વાદ લીટી</label><div class="inp">॥ જય ધારેશ્વર મહાદેવ ॥</div></div>
+<div class="f"><label class="fl">મુખ્ય હેડિંગ</label><div class="inp" style="border-color:#19203F;box-shadow:0 0 0 3px rgba(224,123,22,.45)">ખેતરથી બજાર સુધી, ભરોસાનો સાથી</div><div class="cnt hint"><span>ફોનમાં ૩ લીટીથી વધુ ન થાય</span><span>૩૨ / ૪૦</span></div></div>
+<div class="f"><label class="fl">પેટા લખાણ</label><div class="inp" style="min-height:96px;align-items:flex-start">ચિતલથી સૌરાષ્ટ્રના ખેડૂતો માટે મજબૂત, ટકાઉ અને ઓછા ખર્ચે ચાલતા સનેડા.</div><div class="cnt hint"><span></span><span>૭૦ / ૧૨૦</span></div></div>
+<div class="f"><span class="fl">મંદિરનો ફોટો</span>
+<div style="display:flex;gap:12px;align-items:center"><img src="../assets/temple.webp" alt="શ્રી ધારેશ્વર મહાદેવ મંદિર, ચિતલ" style="width:96px;height:72px;object-fit:cover;border-radius:10px"><button style="min-height:44px;border:0;background:none;font-weight:600;text-decoration:underline;text-underline-offset:4px;cursor:pointer;padding:0">ફોટો બદલો</button></div>
+</div>
+</section>
+
+<section class="card" aria-labelledby="h2s">
+<h2 id="h2s">સરકારી સહાય</h2>
+<div class="f"><label class="fl">હેડિંગ</label><div class="inp">સનેડાની ખરીદી પર સરકારી સહાય</div></div>
+<div class="f"><label class="fl">વિગત</label><div class="inp" style="min-height:140px;align-items:flex-start">ગુજરાત સરકારની કિસાન પરિવહન યોજના હેઠળ સામાન્ય વર્ગના ખેડૂતોને સનેડાની કુલ કિંમતના ૪૦ ટકા અથવા વધુમાં વધુ ₹૬૦,૦૦૦ સુધીની સહાય મળે છે.</div></div>
+<div class="f"><span class="fl">પગલાં</span>
+<div style="display:flex;flex-direction:column;gap:8px">
+<div class="inp"><span style="color:#5B6070">૧</span>i-ખેડૂત પોર્ટલ પર ઑનલાઇન અરજી કરો</div>
+<div class="inp"><span style="color:#5B6070">૨</span>મંજૂરી મળ્યા બાદ માન્ય મોડેલ ખરીદો</div>
+<div class="inp"><span style="color:#5B6070">૩</span>બિલ અને જરૂરી દસ્તાવેજો જમા કરાવો</div>
+</div>
+</div>
+</section>
+</main>
+
+<div style="position:absolute;left:12px;right:12px;bottom:84px;background:#19203F;color:#FFFFFF;border-radius:12px;padding:8px 8px 8px 14px;display:flex;align-items:center;gap:10px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F4A94E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+<span style="flex-grow:1;font-size:15px">સાચવ્યું. સાઇટ પર દેખાય છે.</span>
+<button style="height:44px;padding:0 12px;border:0;border-radius:8px;background:rgba(255,255,255,.12);color:#FFFFFF;font-weight:600;cursor:pointer">પાછું લો</button>
+</div>
+
+<div style="position:absolute;left:0;right:0;bottom:0;background:#FFFFFF;border-top:1px solid #E3E3EA;padding:10px 12px 14px;display:flex;align-items:center;gap:10px">
+<span class="hint" style="flex-grow:1">બધું સચવાયેલું છે</span>
+<button disabled="" style="min-height:48px;padding:0 18px;border-radius:12px;border:0;background:#F4F4F8;color:#8E92A3;font-weight:600">સાચવો</button>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":360,"height":1400}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

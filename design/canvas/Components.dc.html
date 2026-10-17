@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<title>Components — Davada Agro design language</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Gujarati:wdth,wght@75..125,500..800&amp;family=Anek+Latin:wdth,wght@75..125,500..800&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;family=Hind:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#FFFFFF;color:#1C1F26;font-family:"Hind Vadodara","Noto Sans Gujarati",system-ui,sans-serif;font-size:17px;line-height:1.7}
+*{box-sizing:border-box}
+h1,h2,h3{margin:0;font-family:"Anek Gujarati","Hind Vadodara",sans-serif;font-stretch:92%;font-weight:700;line-height:1.25}
+p{margin:0}
+a{color:inherit}
+button{font:inherit;color:inherit}
+dl,dd{margin:0}
+.d{font-family:"Anek Gujarati","Hind Vadodara",sans-serif;font-stretch:92%}
+.doc{font-family:"Hind",system-ui,sans-serif;line-height:1.6}
+.dh{font-family:"Anek Latin","Hind",sans-serif;font-stretch:92%;font-weight:700}
+.lbl{font-family:"Hind",sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#5B6070;font-weight:600;line-height:1.4}
+.cap{font-family:"Hind",sans-serif;font-size:13px;color:#5B6070;line-height:1.4}
+.sec{display:grid;grid-template-columns:260px minmax(0,1fr);gap:48px;padding:64px 96px;border-top:1px solid #E3E3EA}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 22px;border-radius:14px;font-weight:600;font-size:17px;text-decoration:none;border:0;cursor:pointer;white-space:nowrap}
+.btn svg{width:22px;height:22px;flex:none}
+.bk{background:#E07B16;color:#1B1206}
+.bw{background:#1DA851;color:#FFFFFF;font-size:19px;font-weight:700}
+.bg{background:transparent;border:1.5px solid #E3E3EA;color:#1C1F26}
+.bgd{background:transparent;border:1.5px solid rgba(255,255,255,.4);color:#FFFFFF}
+.chip{flex:none;height:44px;padding:0 18px;border-radius:999px;border:1.5px solid #E3E3EA;background:#FFFFFF;font-weight:500;white-space:nowrap;cursor:pointer;display:inline-flex;align-items:center}
+.chip.on{background:#19203F;border-color:#19203F;color:#FFFFFF}
+.lnk{background:none;border:0;padding:10px;font-weight:600;text-decoration:underline;text-underline-offset:4px;min-height:44px;cursor:pointer;color:#1C1F26}
+.mut{color:#5B6070}
+.tag{background:#E07B16;color:#1B1206;font-size:14px;font-weight:600;padding:2px 10px;border-radius:8px;line-height:1.6}
+.stk{background:#FFFFFF;color:#5B6070;font-size:14px;font-weight:500;padding:2px 10px;border-radius:8px;display:inline-flex;align-items:center;gap:7px;line-height:1.6}
+.dot{width:8px;height:8px;border-radius:50%;background:#19203F}
+.ring{width:8px;height:8px;border-radius:50%;border:1.5px solid #5B6070}
+.col{display:flex;flex-direction:column;gap:10px}
+</style>
+</helmet>
+<div style="width:1440px;height:3140px;background:#FFFFFF;display:flex;flex-direction:column">
+
+<div style="padding:72px 96px 56px;display:flex;justify-content:space-between;align-items:flex-end">
+<div class="col">
+<span class="lbl">02 · Components</span>
+<h1 class="dh" style="font-size:56px;line-height:1.05">The parts, in Gujarati.</h1>
+</div>
+<p class="doc mut" style="max-width:52ch;font-size:15px">Every component is drawn in the default locale with real copy from the prototype. Numbers, prices, specs, awards and reviews are placeholders until Pratik Davda confirms them.</p>
+</div>
+
+<!-- Buttons -->
+<div class="sec">
+<div class="col"><span class="lbl">Actions</span><h2 class="dh" style="font-size:28px">Buttons</h2><p class="doc mut" style="font-size:14px">Kesar = the one primary step in an area. Green = WhatsApp, nothing else. Ghost and link for everything secondary. WhatsApp labels are 19 px bold so white on #1DA851 meets large-text contrast.</p></div>
+<div style="display:grid;grid-template-columns:180px repeat(3,minmax(0,1fr));gap:22px 28px;align-items:center">
+<span></span><span class="lbl">Default</span><span class="lbl">Hover / pressed</span><span class="lbl">Keyboard focus</span>
+
+<span class="cap">Primary · kesar</span>
+<div><a class="btn bk" href="#">સનેડા જુઓ</a></div>
+<div><a class="btn bk" href="#" style="background:#EE8A25">સનેડા જુઓ</a></div>
+<div><a class="btn bk" href="#" style="outline:3px solid #E07B16;outline-offset:3px">સનેડા જુઓ</a></div>
+
+<span class="cap">Inquiry · WhatsApp</span>
+<div><a class="btn bw" href="#"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2-.2-.2-.5-.3z"/></svg>વૉટ્સઍપ પર પૂછપરછ</a></div>
+<div><a class="btn bw" href="#" style="background:#12873F"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2-.2-.2-.5-.3z"/></svg>વૉટ્સઍપ પર પૂછપરછ</a></div>
+<div><a class="btn bw" href="#" style="outline:3px solid #E07B16;outline-offset:3px"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2-.2-.2-.5-.3z"/></svg>વૉટ્સઍપ પર પૂછપરછ</a></div>
+
+<span class="cap">Secondary · ghost</span>
+<div><a class="btn bg" href="#"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>ફોન કરો</a></div>
+<div><a class="btn bg" href="#" style="background:#F4F4F8;border-color:#C9CBDD"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>ફોન કરો</a></div>
+<div><a class="btn bg" href="#" style="outline:3px solid #E07B16;outline-offset:3px"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>ફોન કરો</a></div>
+
+<span class="cap">On indigo · ghost</span>
+<div style="grid-column:span 3;background:#19203F;border-radius:14px;padding:20px 24px;display:flex;gap:16px;align-items:center">
+<a class="btn bgd" href="#"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2-.2-.2-.5-.3z"/></svg>વૉટ્સઍપ પર પૂછો</a>
+<span class="cap" style="color:#C9CBDD">Hero only: the WhatsApp action sits beside the kesar primary as an outline so the hero keeps one primary.</span>
+</div>
+
+<span class="cap">Text link · header call</span>
+<div><button class="lnk">વિગતો જુઓ</button></div>
+<div style="display:flex;gap:12px;align-items:center">
+<a href="#" aria-label="ફોન કરો" style="width:44px;height:44px;border-radius:999px;background:#19203F;color:#FFFFFF;display:grid;place-items:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></a>
+<span class="cap">mobile</span>
+</div>
+<div style="display:flex;gap:12px;align-items:center">
+<a href="#" style="height:44px;padding:0 18px;border-radius:999px;background:#19203F;color:#FFFFFF;display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>ફોન કરો</a>
+<span class="cap">desktop</span>
+</div>
+</div>
+</div>
+
+<!-- Chips, language, badges -->
+<div class="sec">
+<div class="col"><span class="lbl">Selection</span><h2 class="dh" style="font-size:28px">Chips, language, badges</h2><p class="doc mut" style="font-size:14px">Chips scroll sideways on phones, never wrap to a second row. The language picker is a native select styled as a pill — the phone’s own picker opens on tap.</p></div>
+<div style="display:flex;flex-direction:column;gap:36px">
+<div class="col">
+<span class="lbl">Filter chips · 44 px</span>
+<div style="display:flex;gap:8px">
+<button class="chip on" aria-pressed="true">બધા</button><button class="chip" aria-pressed="false">ત્રણ પૈડાં</button><button class="chip" aria-pressed="false">ચાર પૈડાં</button><button class="chip" aria-pressed="false">ઓજારો અને ટ્રોલી</button>
+</div>
+<div style="display:flex;gap:8px">
+<button class="chip on" aria-pressed="true">બધા</button><button class="chip" aria-pressed="false">સનેડા</button><button class="chip" aria-pressed="false">ટ્રોલી અને ઓજારો</button><button class="chip" aria-pressed="false">ડિલિવરી</button><button class="chip" aria-pressed="false">વર્કશૉપ</button><button class="chip" aria-pressed="false">સન્માન</button>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px">
+<div class="col">
+<span class="lbl">Language picker · closed / open</span>
+<div style="display:flex;gap:24px;align-items:flex-start">
+<label style="display:flex;align-items:center;gap:6px;border:1px solid #E3E3EA;border-radius:999px;padding:0 14px;height:44px">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B6070" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>
+<select aria-label="ભાષા / भाषा / Language" style="appearance:none;border:0;background:transparent;font:inherit;font-weight:500;color:#1C1F26"><option>ગુજરાતી</option></select>
+<svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5l3 3 3-3" stroke="#1C1F26" stroke-width="1.5" fill="none"/></svg>
+</label>
+<div style="width:200px;border:1px solid #E3E3EA;border-radius:14px;background:#FFFFFF;padding:6px;display:flex;flex-direction:column">
+<div style="height:44px;padding:0 12px;border-radius:10px;background:#F4F4F8;display:flex;align-items:center;justify-content:space-between;font-weight:600">ગુજરાતી<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#19203F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+<div lang="hi" style="height:44px;padding:0 12px;display:flex;align-items:center;font-family:Hind,sans-serif">हिंदी</div>
+<div lang="en" style="height:44px;padding:0 12px;display:flex;align-items:center;font-family:Hind,sans-serif">English</div>
+</div>
+</div>
+</div>
+<div class="col">
+<span class="lbl">Card badges</span>
+<div style="background:#F4F4F8;border-radius:14px;padding:20px;display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+<span class="tag">સૌથી વધુ વેચાતો</span>
+<span class="stk"><span class="dot"></span>સ્ટૉકમાં</span>
+<span class="stk"><span class="ring"></span>ઑર્ડર પર તૈયાર</span>
+</div>
+<p class="cap">Stock dot is indigo, not green — green stays reserved for WhatsApp. Filled = in stock, ring = made to order.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Product cards -->
+<div class="sec">
+<div class="col"><span class="lbl">Product</span><h2 class="dh" style="font-size:28px">Product card</h2><p class="doc mut" style="font-size:14px">Image on the wash, status in the corners, two key specs, price, then exactly one WhatsApp button and a details link. Tapping the image also opens details.</p></div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:start">
+
+<div class="col"><span class="lbl">Light · priced</span>
+<article style="display:flex;flex-direction:column;border:1px solid #E3E3EA;border-radius:18px;overflow:hidden;background:#FFFFFF">
+<button aria-label="વિગતો જુઓ: દવડા શક્તિ ૧૦" style="position:relative;display:block;width:100%;border:0;padding:18px 18px 8px;background:#F4F4F8;cursor:pointer">
+<span class="tag" style="position:absolute;top:12px;left:12px">સૌથી વધુ વેચાતો</span>
+<span class="stk" style="position:absolute;top:12px;right:12px"><span class="dot"></span>સ્ટૉકમાં</span>
+<img src="../assets/KS-10.svg" alt="દવડા શક્તિ ૧૦" style="width:100%;aspect-ratio:16/10;display:block">
+</button>
+<div style="padding:18px 18px 20px;display:flex;flex-direction:column;gap:12px">
+<h3 style="font-size:23px">દવડા શક્તિ ૧૦</h3>
+<p class="mut" style="font-size:16px">ખેડ અને માલવહન બંને માટે સૌથી વધુ પસંદ થતું મોડેલ.</p>
+<dl style="display:flex;gap:24px"><div><dt class="mut" style="font-size:14px">પાવર</dt><dd style="font-weight:600">૧૦ HP</dd></div><div><dt class="mut" style="font-size:14px">ગિયર</dt><dd style="font-weight:600">૫ આગળ, ૧ રિવર્સ</dd></div></dl>
+<div style="padding-top:12px;border-top:1px dashed #E3E3EA"><div class="mut" style="font-size:14px">એક્સ-શોરૂમ કિંમત</div><div class="d" style="font-size:26px;font-weight:800;line-height:1.3">₹૧,૬૫,૦૦૦</div></div>
+<div style="display:flex;flex-direction:column;gap:4px">
+<a class="btn bw" href="#" style="width:100%"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2-.2-.2-.5-.3z"/></svg>વૉટ્સઍપ પર પૂછપરછ</a>
+<button class="lnk">વિગતો જુઓ</button>
+</div>
+</div>
+</article>
+</div>
+
+<div class="col"><span class="lbl">Light · price on request</span>
+<article style="display:flex;flex-direction:column;border:1px solid #E3E3EA;border-radius:18px;overflow:hidden;background:#FFFFFF">
+<button aria-label="વિગતો જુઓ: કલ્ટિવેટર" style="position:relative;display:block;width:100%;border:0;padding:18px 18px 8px;background:#F4F4F8;cursor:pointer">
+<span class="stk" style="position:absolute;top:12px;right:12px"><span class="dot"></span>સ્ટૉકમાં</span>
+<img src="../assets/KC-05.svg" alt="કલ્ટિવેટર" style="width:100%;aspect-ratio:16/10;display:block">
+</button>
+<div style="padding:18px 18px 20px;display:flex;flex-direction:column;gap:12px">
+<h3 style="font-size:23px">કલ્ટિવેટર</h3>
+<p class="mut" style="font-size:16px">ખેતર તૈયાર કરવા માટે સનેડા સાથે જોડી શકાય તેવું કલ્ટિવેટર.</p>
+<dl style="display:flex;gap:24px"><div><dt class="mut" style="font-size:14px">કામની પહોળાઈ</dt><dd style="font-weight:600">૫ ફૂટ</dd></div><div><dt class="mut" style="font-size:14px">જોડાણ</dt><dd style="font-weight:600">અમારા બધા સનેડા સાથે</dd></div></dl>
+<div style="padding-top:12px;border-top:1px dashed #E3E3EA"><div class="mut" style="font-size:14px">&#160;</div><div class="d" style="font-size:21px;font-weight:800;line-height:1.3">કિંમત માટે પૂછો</div></div>
+<div style="display:flex;flex-direction:column;gap:4px">
+<a class="btn bw" href="#" style="width:100%"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2-.2-.2-.5-.3z"/></svg>વૉટ્સઍપ પર પૂછપરછ</a>
+<button class="lnk">વિગતો જુઓ</button>
+</div>
+</div>
+</article>
+</div>
+
+<div class="col"><span class="lbl">Dark mode · made to order</span>
+<article style="display:flex;flex-direction:column;border:1px solid #2B2F3D;border-radius:18px;overflow:hidden;background:#12141C;color:#ECEDF2">
+<button aria-label="વિગતો જુઓ: મિની બુલેટ ટ્રેક્ટર ૧૦" style="position:relative;display:block;width:100%;border:0;padding:18px 18px 8px;background:#1B1E29;cursor:pointer">
+<span class="stk" style="position:absolute;top:12px;right:12px;background:#12141C;color:#A6AABA"><span class="ring" style="border-color:#A6AABA"></span>ઑર્ડર પર તૈયાર</span>
+<img src="../assets/KB-10.svg" alt="મિની બુલેટ ટ્રેક્ટર ૧૦" style="width:100%;aspect-ratio:16/10;display:block">
+</button>
+<div style="padding:18px 18px 20px;display:flex;flex-direction:column;gap:12px">
+<h3 style="font-size:23px">મિની બુલેટ ટ્રેક્ટર ૧૦</h3>
+<p style="font-size:16px;color:#A6AABA">ચાર પૈડાંનું મિની ટ્રેક્ટર. ઢોળાવ અને કાચા રસ્તા પર પણ સ્થિર અને ભરોસાપાત્ર.</p>
+<dl style="display:flex;gap:24px"><div><dt style="font-size:14px;color:#A6AABA">પાવર</dt><dd style="font-weight:600">૧૦ HP</dd></div><div><dt style="font-size:14px;color:#A6AABA">ગિયર</dt><dd style="font-weight:600">૮ આગળ, ૨ રિવર્સ</dd></div></dl>
+<div style="padding-top:12px;border-top:1px dashed #2B2F3D"><div style="font-size:14px;color:#A6AABA">એક્સ-શોરૂમ કિંમત</div><div class="d" style="font-size:26px;font-weight:800;line-height:1.3">₹૨,૨૫,૦૦૦</div></div>
+<div style="display:flex;flex-direction:column;gap:4px">
+<a class="btn bw" href="#" style="width:100%"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2-.2-.2-.5-.3z"/></svg>વૉટ્સઍપ પર પૂછપરછ</a>
+<button class="lnk" style="color:#ECEDF2">વિગતો જુઓ</button>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+
+<!-- Content modules -->
+<div class="sec">
+<div class="col"><span class="lbl">Content</span><h2 class="dh" style="font-size:28px">Proof &amp; guidance</h2><p class="doc mut" style="font-size:14px">Stats, subsidy steps, award and review cards. Step numbers follow the locale’s numerals.</p></div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:start">
+<div class="col"><span class="lbl">Stat · on Indigo 900</span>
+<div style="background:#10142C;border-radius:18px;padding:24px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px">
+<div><div class="d" style="font-size:32px;font-weight:800;color:#F4A94E;line-height:1.2">૧૨+</div><div style="color:#C9CBDD;font-size:15px">વર્ષનો અનુભવ</div></div>
+<div><div class="d" style="font-size:32px;font-weight:800;color:#F4A94E;line-height:1.2">૩,૨૦૦+</div><div style="color:#C9CBDD;font-size:15px">સનેડાની ડિલિવરી</div></div>
+</div>
+</div>
+<div class="col"><span class="lbl">Subsidy steps</span>
+<div style="background:#FCEBD6;border-radius:18px;padding:24px">
+<ol style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;font-weight:500">
+<li style="display:flex;gap:14px;align-items:flex-start"><span class="d" style="flex:none;width:34px;height:34px;border-radius:50%;background:#E07B16;color:#1B1206;font-weight:800;display:grid;place-items:center;line-height:1">૧</span>i-ખેડૂત પોર્ટલ પર ઑનલાઇન અરજી કરો</li>
+<li style="display:flex;gap:14px;align-items:flex-start"><span class="d" style="flex:none;width:34px;height:34px;border-radius:50%;background:#E07B16;color:#1B1206;font-weight:800;display:grid;place-items:center;line-height:1">૨</span>મંજૂરી મળ્યા બાદ માન્ય મોડેલ ખરીદો</li>
+</ol>
+</div>
+</div>
+<div class="col"><span class="lbl">Award card · 250 wide</span>
+<article style="width:250px;border:1px solid #E3E3EA;border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:10px">
+<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#E07B16" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h10v4a5 5 0 0 1-10 0zM7 6H4a3 3 0 0 0 3 4M17 6h3a3 3 0 0 1-3 4M12 13v4M8 21h8M9 17h6v4H9z"/></svg>
+<span class="d" style="font-weight:800;font-size:19px;color:#B85E08">૨૦૨૪</span>
+<h3 style="font-size:18px">શ્રેષ્ઠ કૃષિ સાધન ઉત્પાદક</h3>
+<p class="mut" style="font-size:15px">અમરેલી જિલ્લા ઉદ્યોગ સંઘ</p>
+</article>
+</div>
+<div class="col" style="grid-column:span 2"><span class="lbl">Review card</span>
+<figure style="margin:0;padding:24px;border-radius:18px;background:#F4F4F8;display:flex;flex-direction:column;gap:16px">
+<blockquote style="margin:0;font-size:17px">૬ વર્ષથી અમારો સનેડો રોજ ખેતરમાં ચાલે છે. સર્વિસ માટે ફોન કરીએ એટલે તરત માણસ આવી જાય.</blockquote>
+<figcaption><b style="display:block">રમેશભાઈ પટેલ</b><span class="mut" style="font-size:15px">લાઠી</span></figcaption>
+</figure>
+</div>
+<div class="col"><span class="lbl">Gallery link</span>
+<div style="border:1px solid #E3E3EA;border-radius:18px;padding:22px;display:flex;align-items:center">
+<a href="#" style="min-height:44px;display:inline-flex;align-items:center;gap:8px;font-weight:600;color:#1C1F26;text-decoration:underline;text-underline-offset:4px">વધુ ફોટા જુઓ<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Gallery -->
+<div class="sec">
+<div class="col"><span class="lbl">Gallery</span><h2 class="dh" style="font-size:28px">Tiles &amp; lightbox</h2><p class="doc mut" style="font-size:14px">Square tiles, 12 px radius, no captions on the grid. While a photo loads the tile holds its space in the wash so nothing jumps.</p></div>
+<div style="display:flex;flex-direction:column;gap:32px">
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px">
+<div class="col"><span class="lbl">Loading</span>
+<div style="aspect-ratio:1;border-radius:12px;background:#F4F4F8"></div>
+<span class="cap">Wash, no spinner. Image fades in over 200 ms.</span></div>
+<div class="col"><span class="lbl">Photo</span>
+<button aria-label="ફોટો ખોલો" style="aspect-ratio:1;border-radius:12px;border:0;padding:0;background:#E3E3EA;display:grid;place-items:center;cursor:pointer;position:relative;overflow:hidden">
+<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#5B6070" stroke-width="1.4" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M4 17l5-4.5 3.5 3 3-2.5L20 17"/></svg>
+<span class="cap" style="position:absolute;left:10px;bottom:8px">ફોટો આવશે</span>
+</button>
+<span class="cap">Placeholder until the owner’s photo is added.</span></div>
+<div class="col"><span class="lbl">Video</span>
+<button aria-label="વિડિયો ચલાવો" style="aspect-ratio:1;border-radius:12px;border:0;padding:0;background:#19203F;display:grid;place-items:center;cursor:pointer;position:relative">
+<span style="width:56px;height:56px;border-radius:50%;background:#FFFFFF;display:grid;place-items:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="#19203F" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+<span style="position:absolute;right:10px;bottom:8px;background:rgba(16,20,44,.8);color:#FFFFFF;font-size:13px;padding:0 8px;border-radius:6px;line-height:1.7">૧:૨૪</span>
+</button>
+<span class="cap">YouTube thumbnail + play. Opens in the lightbox.</span></div>
+<div class="col"><span class="lbl">Model photo</span>
+<button aria-label="ફોટો ખોલો: દવડા શક્તિ ૧૦" style="aspect-ratio:1;border-radius:12px;border:0;padding:14px;background:#F4F4F8;display:grid;place-items:center;cursor:pointer">
+<img src="../assets/KS-10.svg" alt="" style="width:100%">
+</button>
+<span class="cap">Has a product ID, so the lightbox shows “આ મોડેલ વિશે પૂછો”.</span></div>
+</div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:24px;align-items:start">
+<div class="col"><span class="lbl">Lightbox bar</span>
+<div style="background:#10142C;border-radius:18px;padding:12px;display:flex;align-items:center;justify-content:space-between;color:#FFFFFF">
+<button aria-label="બંધ કરો" style="width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.12);display:grid;place-items:center;cursor:pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+<span class="d" style="font-weight:600;font-size:17px">૩ / ૨૪</span>
+<button aria-label="લિંક શેર કરો" style="width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.12);display:grid;place-items:center;cursor:pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg></button>
+</div>
+</div>
+<div class="col"><span class="lbl">Mobile dock · after hero</span>
+<div style="border:1px solid #E3E3EA;border-radius:18px;overflow:hidden">
+<div style="background:#FFFFFF;padding:10px 12px;display:grid;grid-template-columns:1fr 1.4fr;gap:10px">
+<a class="btn bg" href="#" style="min-height:48px;border-radius:12px;padding:0 12px"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>ફોન કરો</a>
+<a class="btn bw" href="#" style="min-height:48px;border-radius:12px;padding:0 12px;font-size:18px"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2-.2-.2-.5-.3z"/></svg>વૉટ્સઍપ પર પૂછો</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3140}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
