@@ -51,7 +51,9 @@ Everything except the rating can be corrected from the admin panel after deployi
 
 ## Deploy on Railway
 
-The repo includes a `Dockerfile` and `railway.json`, so Railway builds it as-is.
+Railway builds the repo from its `Dockerfile`. The service is set up with health check path
+`/health` (timeout 120 s) and restart policy *on failure*. `/health` starts Payload, so pending
+migrations and the first-boot seed run before a deploy goes live.
 
 1. **New project** → **Deploy from GitHub repo** → pick `davada-agro` (and the branch).
 2. In the project: **+ New** → **Database** → **PostgreSQL**.
@@ -65,6 +67,7 @@ The repo includes a `Dockerfile` and `railway.json`, so Railway builds it as-is.
    | `ADMIN_PASSWORD` | a first password (change it later in the admin) |
    | `ADMIN_NAME` | e.g. `પ્રતીકભાઈ` (shown as “નમસ્તે, …”) |
    | `SITE_URL` | the public address once you have one, e.g. `https://davadaagro.in` |
+   | `MEDIA_DIR` | `/data/media` |
 
 4. Web service → **Settings** → **Volumes** → add a volume mounted at **`/data`**.
    Uploaded photos are stored in `/data/media` and survive redeploys.
