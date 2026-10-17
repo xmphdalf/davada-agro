@@ -12,7 +12,7 @@ phone-first admin panel so the owner can change prices, stock, photos and page t
 |---|---|
 | Admin panel at `/admin` (the designed, Gujarati-first UI) | ✅ |
 | Payload's built-in admin at `/cms` (fallback for anything not in `/admin`) | ✅ |
-| Public website (home → product sheet → gallery) | ⏳ next. `/` is a placeholder |
+| Public website: home, product sheet (`#p-ID`), gallery + lightbox (`#g-N`), `/content.json` | ✅ |
 
 ### Admin panel (`/admin`)
 
@@ -34,6 +34,17 @@ Built from `design/canvas/AdminPlan.dc.html`, `AdminKit.dc.html` and the `Admin*
 
 All admin labels live in [`src/admin/strings.ts`](src/admin/strings.ts) (gu + en). **The Gujarati admin
 labels are drafts for Pratik Davda to review.**
+
+### Public website
+
+Ported from `design/prototype/prototype.html` (locked layout, colours and text), plus the board
+changes: indigo stock dot, gallery link in the nav, “વધુ ફોટા જુઓ” after the awards, and the new
+gallery page with lightbox. Everything the owner edits in the admin shows up immediately.
+
+- Gujarati by default; Hindi / English via the header picker (`?lang=hi` works too, and the
+  choice is remembered). Empty Hindi/English text falls back to Gujarati.
+- The new gallery strings in [`src/site/strings.ts`](src/site/strings.ts) (`GALLERY`) are drafts for
+  Pratik Davda to review.
 
 ## Placeholders: confirm before launch
 
@@ -118,5 +129,6 @@ src/
   admin/                    the designed admin: strings, server actions, UI kit (ui/), styles
   app/(admin)/admin/        admin routes
   app/(payload)/            Payload REST API (/api) and built-in admin (/cms)
-  app/(frontend)/           public site (placeholder for now) and /health
+  site/                     public site: prototype styles + text, data loader, home, gallery
+  app/(frontend)/           public routes: /, /gallery, /content.json, /health
 ```
